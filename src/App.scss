@@ -58,7 +58,6 @@ a{
 
 .main-descrition{
   padding: 0.5rem 1rem;
-  background-color: rgb(254 249 195);
   text-align: center;
 }
 
@@ -70,15 +69,16 @@ a{
 }
 
 .mian-des-1{
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.75rem;
-  margin: 0 0 1rem 0;
+  margin: 0.5rem 0;
+  text-align: left;
 }
 
 .main-des-2{
-  color: rgb(194 65 12);
+  color: rgb(220 38 38);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 2rem;
   margin: 1rem 0;
 }
@@ -161,10 +161,25 @@ a{
   font-weight: 700;
 }
 
+.congrats-false{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: rgb(34 197 94);
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
 .top-description{
   margin-top: 0.5rem;
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.top-description-false{
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .spots-count{
@@ -198,6 +213,19 @@ a{
   cursor: pointer;
 }
 
+.call-btn-false{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  color: black;
+  text-transform: capitalize;
+  font-weight: 700;
+  padding: 1.25rem;
+  background-color: rgb(234 179 8);
+  // width: 100%;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
 .sub-title{
   font-size: 1.5rem;
   line-height: 2rem;
@@ -208,6 +236,12 @@ a{
 .sub-description{
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.sub-description-false{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 1rem;
 }
 
 .timer{

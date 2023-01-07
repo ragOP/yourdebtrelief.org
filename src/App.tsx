@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import './App.scss';
 
-import Head_img from './assets/headline_spain.png'
+import Head_img from './assets/headline.png'
+import Head_bg from './assets/14_head.png'
 
 function App() {
-  const [quiz, setQuiz] = useState("¿Tienes menos de 65 años?")
+  const [quiz, setQuiz] = useState("Are you currently on Medicare or Medicaid?")
   const [step, setStep] = useState("process")
   const [result, setResult] = useState(true)
   const [min, setMin] = useState(3)
@@ -13,17 +14,17 @@ function App() {
   const [time, setTime] = React.useState(+new Date())      
   
   const stepProcess = () => {
-    if(step==="Revisando sus respuestas..."){
+    if(step==="Reviewing Your Answers..."){
       setTimeout(() => {
-        setStep("Coincidencia con las mejores opciones...")
+        setStep("Matching With Best Options...")
         }, 1500);
       }
-    if(step==="Coincidencia con las mejores opciones..."){
+    if(step==="Matching With Best Options..."){
       setTimeout(() => {
-        setStep("Confirmación de elegibilidad...")
+        setStep("Confirming Eligibility...")
         }, 1500);
       }
-    if(step==="Confirmación de elegibilidad..."){
+    if(step==="Confirming Eligibility..."){
       setTimeout(() => {
         setStep("completed")
         }, 1500);
@@ -51,35 +52,22 @@ function App() {
 
   useEffect(() => {
     stepProcess()
-  }, [step, min])
+  }, [step])
 
   const handleQuizP = () => {
-    if(quiz === "¿Tienes menos de 65 años?"){
-      setQuiz("¿Tiene Medicaid o Medicare?")
+    if(quiz === "Are you currently on Medicare or Medicaid?"){
+      setQuiz("Do you make less than $50,000/year?")
+      setResult(false)
     }else{
-        if(quiz === "¿Tiene Medicaid o Medicare?"){
-          setQuiz("¿Tiene actualmente un Social Security Number?")
-        }
-        else{
-          setStep("Revisando sus respuestas...")
-        }
+      setStep("Reviewing Your Answers...")
     }
   }
 
   const handleQuizN = () => {
-    if(quiz === "¿Tienes menos de 65 años?"){
-      setQuiz("¿Tiene Medicaid o Medicare?")
+    if(quiz === "Are you currently on Medicare or Medicaid?"){
+      setQuiz("Do you make less than $50,000/year?")
     }else{
-      if(quiz === "¿Tiene Medicaid o Medicare?"){
-        setQuiz("¿Tiene actualmente un Social Security Number?")
-      }else{
-        if(quiz === "¿Tiene actualmente un Social Security Number?"){
-          setQuiz("Si no es ciudadano estadounidense, ¿tiene actualmente un Premanent Resident Card?")
-        }else{
-            setResult(false)
-            setStep("Revisando sus respuestas...")
-        }
-      }
+      setStep("Reviewing Your Answers...")
     }
   }
 
@@ -92,13 +80,16 @@ function App() {
             <div className='main-descrition'>
               {/* <div className='main-des-title'>Biden extiende el plan de seguro de salud gratuito para los estadounidenses<br /> que ganan <span style={{backgroundColor:"yellow"}}>menos de $ 50k / año</span></div> */}
               <img src = {Head_img} alt = "head" width = "100%" />
-              <div className='mian-des-1'>La fecha límite para asegurar su subsidio de salud finaliza el <span style = {{fontWeight:"700"}}>15 de enero</span>, ¡así que llame a la línea directa si califica!</div>
-              <div className='main-des-2'>Responda 2 preguntas simples a continuación para verificar la elegibilidad en solo 30 segundos</div>
+              <img src = {Head_bg} alt = "head" width = "80%" />
+              <div className='mian-des-1'>Americans making less than $50,000 that is NOT on Medicaid or Medicare can activate their Free Health Benefits starting this week. All you have to do is take the free quiz below to see if you're eligible.</div>
+              <div className='mian-des-1'>If you are, you can claim up to $1400/month in health benefits to completely cover the cost of health insurance, dental, vision, treatments, and more.</div>
+              <div className='mian-des-1'>Just don't wait too long, because the deadline to claim your $2800 benefit ends January 15th.!</div>
+              <div className='main-des-2'>Answer 2 simple questions below to <span style={{borderBottom:"2px red solid"}}>check eligibility</span> in just 30 seconds</div>
             </div>
             <div className='survey'>
               <div className='quiz'>{quiz}</div>
               <div className='answer'>
-                <div className='answer-btn' onClick={handleQuizP}>Sí</div>
+                <div className='answer-btn' onClick={handleQuizP}>Yes</div>
                 <div className='answer-btn' onClick={handleQuizN}>No</div>
               </div>
             </div>
@@ -112,22 +103,35 @@ function App() {
             <div className='checking'>
               {(result === true)?
                 <>
-                  <div className='congrats'>¡Felicitaciones, USTED CALIFICA!</div>
-                  <div className='top-description'>¡Haga una llamada rápida para reclamar su subsidio de salud!</div>
-                  <div className='spots-count'>Lugares restantes: 4</div>
-                  <div className='tap-direction'>👇 TOCA ABAJO PARA LLAMAR 👇</div>
+                  <div className='congrats'>Congratulations, YOU QUALIFY!</div>
+                  <div className='top-description'>Make a <span style={{fontWeight:"700", borderBottom:"2px solid"}}>quick call</span> to claim your health subsidy!</div>
+                  <div className='spots-count'>Spots remaining: 4</div>
+                  <div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
                   <div className='call-btn'>
-                    <a href = "tel:+18332464598">LLAMADA (833)-246-4598</a>
+                    <a href = "tel:+18332464598">CALL NOW: (833)-246-4598</a>
                   </div>
-                  <div className='sub-title'>Nosotras hemos reservado tu lugar</div>
-                  <div className='sub-description'>Debido al alto volumen de llamadas, su agente oficial está esperando solo 3 minutos, luego su lugar no estará reservado.</div>
+                  <div className='sub-title'>We Have Reserved Your Spot</div>
+                  <div className='sub-description'>Due to high call volume, your official agent is waiting for only <span style={{fontWeight:"700"}}>3 minutes</span>, then your spot will not be reserved.</div>
                   <div className='timer'>
                     <div className='timer-cell'>{min}</div>
                     <div className='timer-cell'>:</div>
                     <div className='timer-cell'>{second}</div>
                   </div>
                 </>:
-                <div>Lo sentimos, no tiene derecho al subsidio sanitario!</div>
+                <>
+                <div className='congrats-false'>Sorry, We Couldn't Qualify You For $2800 In Health Benefits, But There Is Something Better For You!</div>
+                <div className='top-description-false'>You Could Qualify For <span style={{fontWeight:"700"}}>Over $5,100 In Medicare Benefits!</span> </div>
+                <div className='top-description-false'>Tap Below For The 60 Second Quiz To See How Much You Are Eligible For.</div>
+                <div className='call-btn-false'>
+                  <a href = "https://medicareplan.com/medicare?token=632846123-MVKQ-xduZii7gja9hFPsPJYQUs_k1stcmDFGjNWsgJHrStxyCufc2KWhnEKp23_j#medicare_flow/Medicare_Currently_Enrolled">Claim Up To $5,100 In Benefits</a>
+                </div>
+                <div className='sub-description-false'>Hurry! The window to claim your benefits could end in:</div>
+                <div className='timer'>
+                  <div className='timer-cell'>{min}</div>
+                  <div className='timer-cell'>:</div>
+                  <div className='timer-cell'>{second}</div>
+                </div>
+              </>
               }
               
             </div>
