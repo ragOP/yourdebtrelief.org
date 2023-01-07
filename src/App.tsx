@@ -80,7 +80,7 @@ function App() {
             <div className='main-descrition'>
               {/* <div className='main-des-title'>Biden extiende el plan de seguro de salud gratuito para los estadounidenses<br /> que ganan <span style={{backgroundColor:"yellow"}}>menos de $ 50k / año</span></div> */}
               <img src = {Head_img} alt = "head" width = "100%" />
-              <img src = {Head_bg} alt = "head" width = "80%" />
+              <img src = {Head_bg} alt = "head" width = "80%" style = {{marginLeft:"10%"}} />
               <div className='mian-des-1'>Americans making less than $50,000 that is NOT on Medicaid or Medicare can activate their Free Health Benefits starting this week. All you have to do is take the free quiz below to see if you're eligible.</div>
               <div className='mian-des-1'>If you are, you can claim up to $1400/month in health benefits to completely cover the cost of health insurance, dental, vision, treatments, and more.</div>
               <div className='mian-des-1'>Just don't wait too long, because the deadline to claim your $2800 benefit ends January 15th.!</div>
