@@ -69,12 +69,13 @@ export default function First_EN() {
 		setQuiz("Are You On Medicaid or Medicare?")
 		}else{
 		setStep("Reviewing Your Answers...")
+		topScroll("top");
 		}
 	}
 
     return(
         <div>
-			<div className='top-sticky'>USA Savings Journal</div>
+			<div className='top-sticky' id='top'>USA Savings Journal</div>
 			{step==="process"?
 				<>
 				<div className='main-container'>

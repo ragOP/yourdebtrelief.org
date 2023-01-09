@@ -74,6 +74,7 @@ export default function First_SP() {
             }
             else{
                 setStep("Revisando sus respuestas...")
+                topScroll("top");
             }
         }
         }
@@ -91,6 +92,7 @@ export default function First_SP() {
             }else{
                 setResult(false)
                 setStep("Revisando sus respuestas...")
+                topScroll("top");
             }
             }
         }
@@ -98,7 +100,7 @@ export default function First_SP() {
 
     return(
         <div>
-			<div className='top-sticky'>USA Savings Journal</div>
+			<div className='top-sticky' id='top'>USA Savings Journal</div>
             {step==="process"?
                 <>
                 <div className='main-container'>

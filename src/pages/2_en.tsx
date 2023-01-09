@@ -74,6 +74,7 @@ export default function Second_EN() {
 		setResult(false)
 		}else{
 		setStep("Reviewing Your Answers...")
+        topScroll("top");
 		}
 	}
 
@@ -83,11 +84,12 @@ export default function Second_EN() {
 		setQuiz("Do you make less than $50,000/year?")
 		}else{
 		setStep("Reviewing Your Answers...")
+        topScroll("top");
 		}
 	}
     return(
         <div>
-			<div className='top-sticky'>USA Savings Journal</div>
+			<div className='top-sticky' id='top'>USA Savings Journal</div>
 			{step==="process"?
 				<>
 				<div className='main-container'>
