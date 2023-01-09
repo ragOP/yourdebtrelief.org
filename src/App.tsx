@@ -5,6 +5,7 @@ import './App.scss';
 import First_EN from './pages/1_en';
 import First_SP from './pages/1_sp';
 import Second_EN from './pages/2_en';
+import Second_SP from "./pages/2_sp";
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
           <Route path = "/engaca1" element = {<First_EN />} />
           <Route path = "/spanaca1" element = {<First_SP />} />
           <Route path = "/engaca2" element = {<Second_EN />} />
+          <Route path = "/spanaca2" element = {<Second_SP />} />
         </Routes>
       </div>
     </Router>
