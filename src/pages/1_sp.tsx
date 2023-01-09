@@ -104,7 +104,7 @@ export default function First_SP() {
             {step==="process"?
                 <>
                 <div className='main-container'>
-                    <div className='main-descrition'>
+                    <div className='main-descrition-bg'>
                     {/* <div className='main-des-title'>Biden extiende el plan de seguro de salud gratuito para los estadounidenses<br /> que ganan <span style={{backgroundColor:"yellow"}}>menos de $ 50k / año</span></div> */}
                     <img src = {Head_img} alt = "head" width = "100%" />
                     <div className='mian-des-1'>La fecha límite para asegurar su subsidio de salud finaliza el <span style = {{fontWeight:"700"}}>15 de enero</span>, ¡así que llame a la línea directa si califica!</div>
