@@ -119,7 +119,7 @@ export default function First_EN() {
 			}
 			<div className='footer'>
 				<div className='terms'>Terms & Conditions | Privacy Policy</div>
-				<div className='copyright'>Copyright © 2022 - All right reserved USA Savings Journal.</div>
+				<div className='copyright'>Copyright © 2022 - All right reserved Daily America Savings.</div>
 			</div>
 		</div>
     )

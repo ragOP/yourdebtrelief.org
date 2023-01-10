@@ -14,7 +14,7 @@ export default function Second_EN() {
 
 	const [quiz, setQuiz] = useState("Are you currently on Medicare or Medicaid?")
 	const [step, setStep] = useState("process")
-	const [result, setResult] = useState(true)
+	// const [result, setResult] = useState(true)
 	const [min, setMin] = useState(3)
 	const [second, setSecond] = useState<any>(0)
 
@@ -67,18 +67,18 @@ export default function Second_EN() {
 			scrollTo({ id });
 		}
 
-	const handleQuizP = () => {
-		topScroll("btn");
-		if(quiz === "Are you currently on Medicare or Medicaid?"){
-		setQuiz("Do you make less than $50,000/year?")
-		setResult(false)
-		}else{
-		setStep("Reviewing Your Answers...")
-        topScroll("top");
-		}
-	}
+	// const handleQuizP = () => {
+	// 	topScroll("btn");
+	// 	if(quiz === "Are you currently on Medicare or Medicaid?"){
+	// 	setQuiz("Do you make less than $50,000/year?")
+	// 	setResult(false)
+	// 	}else{
+	// 	setStep("Reviewing Your Answers...")
+    //     topScroll("top");
+	// 	}
+	// }
 
-	const handleQuizN = () => {
+	const handleQuiz = () => {
 		topScroll("btn");
 		if(quiz === "Are you currently on Medicare or Medicaid?"){
 		setQuiz("Do you make less than $50,000/year?")
@@ -105,8 +105,8 @@ export default function Second_EN() {
 					<div className='survey'>
 					<div className='quiz' id='btn'>{quiz}</div>
 					<div className='answer'>
-						<div className='answer-btn' onClick={handleQuizP}>Yes</div>
-						<div className='answer-btn' onClick={handleQuizN}>No</div>
+						<div className='answer-btn' onClick={handleQuiz}>Yes</div>
+						<div className='answer-btn' onClick={handleQuiz}>No</div>
 					</div>
 					</div>
 				</div>
@@ -117,8 +117,8 @@ export default function Second_EN() {
 					{step}
 					</div>:
 					<div className='checking'>
-					{(result === true)?
-						<>
+					{/* {(result === true)?
+						<> */}
 						<div className='congrats'>Congratulations, YOU QUALIFY!</div>
 						<div className='top-description'>Make a <span style={{fontWeight:"700", borderBottom:"2px solid"}}>quick call</span> to claim your health subsidy!</div>
 						<div className='spots-count'>Spots remaining: 4</div>
@@ -133,7 +133,7 @@ export default function Second_EN() {
 							<div className='timer-cell'>:</div>
 							<div className='timer-cell'>{second}</div>
 						</div>
-						</>:
+						{/* </>:
 						<>
 						<div className='congrats-false'>Sorry, We Couldn't Qualify You For $2800 In Health Benefits, But There Is Something Better For You!</div>
 						<div className='top-description-false'>You Could Qualify For <span style={{fontWeight:"700"}}>Over $5,100 In Medicare Benefits!</span> </div>
@@ -148,14 +148,14 @@ export default function Second_EN() {
 						<div className='timer-cell'>{second}</div>
 						</div>
 					</>
-					}
+					} */}
 					
 					</div>
 				)
 			}
 			<div className='footer'>
 				<div className='terms'>Terms & Conditions | Privacy Policy</div>
-				<div className='copyright'>Copyright © 2022 - All right reserved USA Savings Journal.</div>
+				<div className='copyright'>Copyright © 2022 - All right reserved Daily America Savings.</div>
 			</div>
 		</div>
     )
