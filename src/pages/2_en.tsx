@@ -124,7 +124,7 @@ export default function Second_EN() {
 						<div className='spots-count'>Spots remaining: 4</div>
 						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
 						<div className='call-btn'>
-							<a href = "tel:+18332464598">CALL NOW: (833)-246-4598</a>
+							<a href = "tel:+18332464598">CALL (833)-246-4598</a>
 						</div>
 						<div className='sub-title'>We Have Reserved Your Spot</div>
 						<div className='sub-description'>Due to high call volume, your official agent is waiting for only <span style={{fontWeight:"700"}}>3 minutes</span>, then your spot will not be reserved.</div>

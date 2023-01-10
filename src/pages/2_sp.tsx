@@ -124,7 +124,7 @@ export default function Second_SP() {
 						<div className='spots-count'>Lugares restantes: 4</div>
 						<div className='tap-direction'>👇 TOCA ABAJO PARA LLAMAR 👇</div>
 						<div className='call-btn'>
-							<a href = "tel:+18332464598">CALL NOW: (833)-246-4598</a>
+							<a href = "tel:+18332464598">CALL (833)-246-4598</a>
 						</div>
 						<div className='sub-title'>Nosotras hemos reservado tu lugar</div>
 						<div className='sub-description'>Debido al alto volumen de llamadas, su agente oficial está esperando solo 3 minutos, luego su lugar no estará reservado.</div>
