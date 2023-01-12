@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import axios from "axios";
 import './styles.scss'
 
 import { scrollTo } from '../utils';
@@ -9,7 +10,86 @@ export default function First_SP() {
 
     useEffect(() => {
 		window.document.title="Verifique su elegibilidad ahora"
+        
+        axios
+          .get(process.env.REACT_APP_PROXY + `/visits/2`)
+          .then(({ data }) => {
+            if(data.length===0){
+                const visits = {
+                    visits: 1,
+                    views: 0,
+                    calls: 0,
+                    positives: 0,
+                    negatives: 0,
+                }
+    
+                axios
+                .post(
+                    process.env.REACT_APP_PROXY + `/visits/create-visits2`,
+                    visits
+                )
+                .catch((err) =>
+                    console.log(err)
+                );
+    
+            }else{
+                const _id = data[0]._id
+                const _visits = data[0].visits
+                const _views = data[0].views
+                const _calls = data[0].calls
+                const _positives = data[0].positives
+                const _negatives = data[0].negatives
+                
+                const visits = {
+                    visits: _visits+1,
+                    views: _views,
+                    calls: _calls,
+                    positives: _positives,
+                    negatives: _negatives,
+                }
+                axios
+                .put(
+                    process.env.REACT_APP_PROXY + `/visits/update-visits2/`+_id,
+                    visits
+                )
+                .catch((err) =>
+                    console.log(err)
+                );
+                    }
+                })
+            .catch((error) => {
+                console.log(error);
+            });
 	}, [])
+
+
+    const handleCall = () => {
+        axios
+        .get(process.env.REACT_APP_PROXY + `/visits/2`)
+        .then(({ data }) => {
+            const _id = data[0]._id
+            const _visits = data[0].visits
+            const _views = data[0].views
+            const _calls = data[0].calls
+            const _positives = data[0].positives
+            const _negatives = data[0].negatives
+            const visits = {
+                visits: _visits,
+                views: _views,
+                calls: _calls+1,
+                positives: _positives,
+                negatives: _negatives,
+            }
+        axios
+        .put(
+            process.env.REACT_APP_PROXY + `/visits/update-visits2/`+_id,
+            visits
+        )
+        .catch((err) =>
+            console.log(err)
+        );
+        })
+    }
 
 	const [quiz, setQuiz] = useState("¿Tienes menos de 65 años?")
     const [step, setStep] = useState("process")
@@ -31,6 +111,32 @@ export default function First_SP() {
             if(step==="Confirmación de elegibilidad..."){
             setTimeout(() => {
                 setStep("completed")
+
+                axios
+				.get(process.env.REACT_APP_PROXY + `/visits/2`)
+				.then(({ data }) => {
+					const _id = data[0]._id
+					const _visits = data[0].visits
+					const _views = data[0].views
+					const _calls = data[0].calls
+					const _positives = data[0].positives
+					const _negatives = data[0].negatives
+					const visits = {
+						visits: _visits,
+						views: _views+1,
+						calls: _calls,
+						positives: _positives,
+						negatives: _negatives,
+					}
+				axios
+				.put(
+					process.env.REACT_APP_PROXY + `/visits/update-visits2/`+_id,
+					visits
+				)
+				.catch((err) =>
+					console.log(err)
+				);
+			})
                 }, 1500);
             }
         
@@ -77,7 +183,33 @@ export default function First_SP() {
                 topScroll("top");
             }
         }
-        }
+
+        axios
+		.get(process.env.REACT_APP_PROXY + `/visits/2`)
+		.then(({ data }) => {
+			const _id = data[0]._id
+			const _visits = data[0].visits
+			const _views = data[0].views
+			const _calls = data[0].calls
+			const _positives = data[0].positives
+			const _negatives = data[0].negatives
+			const visits = {
+				visits: _visits,
+				views: _views,
+				calls: _calls,
+				positives: _positives+1,
+				negatives: _negatives,
+			}
+		axios
+		.put(
+			process.env.REACT_APP_PROXY + `/visits/update-visits2/`+_id,
+			visits
+		)
+		.catch((err) =>
+			console.log(err)
+		);
+	  })
+    }
     
     const handleQuizN = () => {
         topScroll("btn");
@@ -96,6 +228,32 @@ export default function First_SP() {
             }
             }
         }
+
+        axios
+		.get(process.env.REACT_APP_PROXY + `/visits/2`)
+		.then(({ data }) => {
+			const _id = data[0]._id
+			const _visits = data[0].visits
+			const _views = data[0].views
+			const _calls = data[0].calls
+			const _positives = data[0].positives
+			const _negatives = data[0].negatives
+			const visits = {
+				visits: _visits,
+				views: _views,
+				calls: _calls,
+				positives: _positives,
+				negatives: _negatives+1,
+			}
+		axios
+		.put(
+			process.env.REACT_APP_PROXY + `/visits/update-visits2/`+_id,
+			visits
+		)
+		.catch((err) =>
+			console.log(err)
+		);
+	  })
     }
 
     return(
@@ -131,7 +289,7 @@ export default function First_SP() {
                         <div className='top-description'>¡Haga una llamada rápida para reclamar su subsidio de salud!</div>
                         <div className='spots-count'>Lugares restantes: 4</div>
                         <div className='tap-direction'>👇 TOCA ABAJO PARA LLAMAR 👇</div>
-                        <div className='call-btn'>
+                        <div className='call-btn' onClick={handleCall}>
                             <a href = "tel:+18662270851">CALL (866)-227-0851</a>
                         </div>
                         <div className='sub-title'>Nosotras hemos reservado tu lugar</div>

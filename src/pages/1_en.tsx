@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import axios from "axios";
 import './styles.scss'
 
 import { scrollTo } from '../utils';
@@ -8,8 +9,88 @@ import Head_img from '../assets/headline.png'
 export default function First_EN() {
 
 	useEffect(() => {
-		window.document.title="Check Your Eligibility Now"
+		window.document.title="Check Your Eligibility Now";
+
+		axios
+      .get(process.env.REACT_APP_PROXY + `/visits/1`)
+      .then(({ data }) => {
+        if(data.length===0){
+			const visits = {
+				visits: 1,
+				views: 0,
+				calls: 0,
+				positives: 0,
+				negatives: 0,
+			}
+
+			axios
+			.post(
+				process.env.REACT_APP_PROXY + `/visits/create-visits1`,
+				visits
+			)
+			.catch((err) =>
+				console.log(err)
+			);
+
+		}else{
+			const _id = data[0]._id
+			const _visits = data[0].visits
+			const _views = data[0].views
+			const _calls = data[0].calls
+			const _positives = data[0].positives
+			const _negatives = data[0].negatives
+			
+			const visits = {
+				visits: _visits+1,
+				views: _views,
+				calls: _calls,
+				positives: _positives,
+				negatives: _negatives,
+			}
+			axios
+			.put(
+				process.env.REACT_APP_PROXY + `/visits/update-visits1/`+_id,
+				visits
+			)
+			.catch((err) =>
+				console.log(err)
+			);
+				}
+			})
+		.catch((error) => {
+			console.log(error);
+		});
+
 	}, [])
+
+	const handleCall = () => {
+		axios
+		.get(process.env.REACT_APP_PROXY + `/visits/1`)
+		.then(({ data }) => {
+			const _id = data[0]._id
+			const _visits = data[0].visits
+			const _views = data[0].views
+			const _calls = data[0].calls
+			const _positives = data[0].positives
+			const _negatives = data[0].negatives
+			const visits = {
+				visits: _visits,
+				views: _views,
+				calls: _calls+1,
+				positives: _positives,
+				negatives: _negatives,
+			}
+		axios
+		.put(
+			process.env.REACT_APP_PROXY + `/visits/update-visits1/`+_id,
+			visits
+		)
+		.catch((err) =>
+			console.log(err)
+		);
+	  })
+	}
+
 
 	const [quiz, setQuiz] = useState("Are you under 65?")
 	const [step, setStep] = useState("process")
@@ -30,17 +111,47 @@ export default function First_EN() {
 		  if(step==="Confirming Eligibility..."){
 			setTimeout(() => {
 			  setStep("completed")
+
+			  axios
+				.get(process.env.REACT_APP_PROXY + `/visits/1`)
+				.then(({ data }) => {
+					const _id = data[0]._id
+					const _visits = data[0].visits
+					const _views = data[0].views
+					const _calls = data[0].calls
+					const _positives = data[0].positives
+					const _negatives = data[0].negatives
+					const visits = {
+						visits: _visits,
+						views: _views+1,
+						calls: _calls,
+						positives: _positives,
+						negatives: _negatives,
+					}
+				axios
+				.put(
+					process.env.REACT_APP_PROXY + `/visits/update-visits1/`+_id,
+					visits
+				)
+				.catch((err) =>
+					console.log(err)
+				);
+			})
 			  }, 1500);
 			}
 	  
 		  if(step==="completed"){
 			const startTime:any = new Date();
-			setInterval(()=> {
+			const timer = setInterval(()=> {
 			  const nowTime:any = new Date();
 			  // setMin(min+1)
 			  setSecond((180-Math.round((nowTime-startTime)/1000))%60)
 			  setMin(Math.floor((180-Math.round((nowTime-startTime)/1000))/60))
 			}, 1000)
+			// if(Math.round((new Date()-startTime)/1000)){
+			// 	console.log("dsfdsfdsf");
+			// 	return clearInterval(timer)
+			// }
 		}
 	}
 
@@ -63,7 +174,7 @@ export default function First_EN() {
 			scrollTo({ id });
 		}
 
-	const handleQuiz = () => {
+	const handleQuizP = () => {
 		topScroll("btn");
 		if(quiz === "Are you under 65?"){
 		setQuiz("Are You On Medicaid or Medicare?")
@@ -71,6 +182,68 @@ export default function First_EN() {
 		setStep("Reviewing Your Answers...")
 		topScroll("top");
 		}
+
+		axios
+		.get(process.env.REACT_APP_PROXY + `/visits/1`)
+		.then(({ data }) => {
+			const _id = data[0]._id
+			const _visits = data[0].visits
+			const _views = data[0].views
+			const _calls = data[0].calls
+			const _positives = data[0].positives
+			const _negatives = data[0].negatives
+			const visits = {
+				visits: _visits,
+				views: _views,
+				calls: _calls,
+				positives: _positives+1,
+				negatives: _negatives,
+			}
+		axios
+		.put(
+			process.env.REACT_APP_PROXY + `/visits/update-visits1/`+_id,
+			visits
+		)
+		.catch((err) =>
+			console.log(err)
+		);
+	  })
+	}
+
+	const handleQuizN = () => {
+		topScroll("btn");
+		if(quiz === "Are you under 65?"){
+		setQuiz("Are You On Medicaid or Medicare?")
+		}else{
+		setStep("Reviewing Your Answers...")
+		topScroll("top");
+		}
+
+		axios
+		.get(process.env.REACT_APP_PROXY + `/visits/1`)
+		.then(({ data }) => {
+			const _id = data[0]._id
+			const _visits = data[0].visits
+			const _views = data[0].views
+			const _calls = data[0].calls
+			const _positives = data[0].positives
+			const _negatives = data[0].negatives
+			const visits = {
+				visits: _visits,
+				views: _views,
+				calls: _calls,
+				positives: _positives,
+				negatives: _negatives+1,
+			}
+		axios
+		.put(
+			process.env.REACT_APP_PROXY + `/visits/update-visits1/`+_id,
+			visits
+		)
+		.catch((err) =>
+			console.log(err)
+		);
+	  })
 	}
 
     return(
@@ -88,8 +261,8 @@ export default function First_EN() {
 					<div className='survey'>
 					<div className='quiz' id='btn'>{quiz}</div>
 					<div className='answer'>
-						<div className='answer-btn' onClick={handleQuiz}>Yes</div>
-						<div className='answer-btn' onClick={handleQuiz}>No</div>
+						<div className='answer-btn' onClick={handleQuizP}>Yes</div>
+						<div className='answer-btn' onClick={handleQuizN}>No</div>
 					</div>
 					</div>
 				</div>
@@ -104,7 +277,7 @@ export default function First_EN() {
 					<div className='top-description'>Make a quick call to claim your health subsidy!</div>
 					<div className='spots-count'>Spots remaining: 4</div>
 					<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
-					<div className='call-btn'>
+					<div className='call-btn' onClick={handleCall}>
 						<a href = "tel:+18332464598">CALL (833)-246-4598</a>
 					</div>
 					<div className='sub-title'>We Have Reserved Your Spot</div>

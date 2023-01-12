@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import axios from "axios";
 import './styles.scss'
 
 import { scrollTo } from '../utils';
@@ -10,7 +11,85 @@ export default function Second_EN() {
 
     useEffect(() => {
 		window.document.title="Check Your Eligibility Now"
+        axios
+          .get(process.env.REACT_APP_PROXY + `/visits/3`)
+          .then(({ data }) => {
+            if(data.length===0){
+                const visits = {
+                    visits: 1,
+                    views: 0,
+                    calls: 0,
+                    positives: 0,
+                    negatives: 0,
+                }
+    
+                axios
+                .post(
+                    process.env.REACT_APP_PROXY + `/visits/create-visits3`,
+                    visits
+                )
+                .catch((err) =>
+                    console.log(err)
+                );
+    
+            }else{
+                const _id = data[0]._id
+                const _visits = data[0].visits
+                const _views = data[0].views
+                const _calls = data[0].calls
+                const _positives = data[0].positives
+                const _negatives = data[0].negatives
+                
+                const visits = {
+                    visits: _visits+1,
+                    views: _views,
+                    calls: _calls,
+                    positives: _positives,
+                    negatives: _negatives,
+                }
+                axios
+                .put(
+                    process.env.REACT_APP_PROXY + `/visits/update-visits3/`+_id,
+                    visits
+                )
+                .catch((err) =>
+                    console.log(err)
+                );
+                    }
+                })
+            .catch((error) => {
+                console.log(error);
+            });
 	}, [])
+
+
+    const handleCall = () => {
+        axios
+        .get(process.env.REACT_APP_PROXY + `/visits/3`)
+        .then(({ data }) => {
+            const _id = data[0]._id
+            const _visits = data[0].visits
+            const _views = data[0].views
+            const _calls = data[0].calls
+            const _positives = data[0].positives
+            const _negatives = data[0].negatives
+            const visits = {
+                visits: _visits,
+                views: _views,
+                calls: _calls+1,
+                positives: _positives,
+                negatives: _negatives,
+            }
+        axios
+        .put(
+            process.env.REACT_APP_PROXY + `/visits/update-visits3/`+_id,
+            visits
+        )
+        .catch((err) =>
+            console.log(err)
+        );
+        })
+    }
 
 	const [quiz, setQuiz] = useState("Are you currently on Medicare or Medicaid?")
 	const [step, setStep] = useState("process")
@@ -34,6 +113,32 @@ export default function Second_EN() {
 		if(step==="Confirming Eligibility..."){
 		setTimeout(() => {
 			setStep("completed")
+
+            axios
+				.get(process.env.REACT_APP_PROXY + `/visits/3`)
+				.then(({ data }) => {
+					const _id = data[0]._id
+					const _visits = data[0].visits
+					const _views = data[0].views
+					const _calls = data[0].calls
+					const _positives = data[0].positives
+					const _negatives = data[0].negatives
+					const visits = {
+						visits: _visits,
+						views: _views+1,
+						calls: _calls,
+						positives: _positives,
+						negatives: _negatives,
+					}
+				axios
+				.put(
+					process.env.REACT_APP_PROXY + `/visits/update-visits3/`+_id,
+					visits
+				)
+				.catch((err) =>
+					console.log(err)
+				);
+			})
 			}, 1500);
 		}
 
@@ -78,7 +183,7 @@ export default function Second_EN() {
 	// 	}
 	// }
 
-	const handleQuiz = () => {
+	const handleQuizP = () => {
 		topScroll("btn");
 		if(quiz === "Are you currently on Medicare or Medicaid?"){
 		setQuiz("Do you make less than $50,000/year?")
@@ -86,7 +191,70 @@ export default function Second_EN() {
 		setStep("Reviewing Your Answers...")
         topScroll("top");
 		}
+
+        axios
+		.get(process.env.REACT_APP_PROXY + `/visits/3`)
+		.then(({ data }) => {
+			const _id = data[0]._id
+			const _visits = data[0].visits
+			const _views = data[0].views
+			const _calls = data[0].calls
+			const _positives = data[0].positives
+			const _negatives = data[0].negatives
+			const visits = {
+				visits: _visits,
+				views: _views,
+				calls: _calls,
+				positives: _positives+1,
+				negatives: _negatives,
+			}
+		axios
+		.put(
+			process.env.REACT_APP_PROXY + `/visits/update-visits3/`+_id,
+			visits
+		)
+		.catch((err) =>
+			console.log(err)
+		);
+	  })
 	}
+
+    const handleQuizN = () => {
+		topScroll("btn");
+		if(quiz === "Are you currently on Medicare or Medicaid?"){
+		setQuiz("Do you make less than $50,000/year?")
+		}else{
+		setStep("Reviewing Your Answers...")
+        topScroll("top");
+		}
+
+        axios
+		.get(process.env.REACT_APP_PROXY + `/visits/3`)
+		.then(({ data }) => {
+			const _id = data[0]._id
+			const _visits = data[0].visits
+			const _views = data[0].views
+			const _calls = data[0].calls
+			const _positives = data[0].positives
+			const _negatives = data[0].negatives
+			const visits = {
+				visits: _visits,
+				views: _views,
+				calls: _calls,
+				positives: _positives,
+				negatives: _negatives+1,
+			}
+		axios
+		.put(
+			process.env.REACT_APP_PROXY + `/visits/update-visits3/`+_id,
+			visits
+		)
+		.catch((err) =>
+			console.log(err)
+		);
+	  })
+	}
+
     return(
         <div>
 			<div className='top-sticky' id='top'>USA Savings Journal</div>
@@ -96,7 +264,7 @@ export default function Second_EN() {
 					<div className='main-descrition'>
 					{/* <div className='main-des-title'>Biden extiende el plan de seguro de salud gratuito para los estadounidenses<br /> que ganan <span style={{backgroundColor:"yellow"}}>menos de $ 50k / año</span></div> */}
 					<img src = {Head_img} alt = "head" width = "100%" />
-					<img src = {Head_bg} alt = "head" width = "80%" style = {{marginLeft:"10%"}} />
+					<img className='topic-img' src = {Head_bg} alt = "head"/>
 					<div className='mian-des-1-left'>Americans making less than $50,000 that is NOT on Medicaid or Medicare can activate their Free Health Benefits starting this week. All you have to do is take the free quiz below to see if you're eligible.</div>
 					<div className='mian-des-1-left'>If you are, you can claim up to $1400/month in health benefits to completely cover the cost of health insurance, dental, vision, treatments, and more.</div>
 					<div className='mian-des-1-left'>Just don't wait too long, because the deadline to claim your $2800 benefit ends January 15th.!</div>
@@ -105,8 +273,8 @@ export default function Second_EN() {
 					<div className='survey'>
 					<div className='quiz' id='btn'>{quiz}</div>
 					<div className='answer'>
-						<div className='answer-btn' onClick={handleQuiz}>Yes</div>
-						<div className='answer-btn' onClick={handleQuiz}>No</div>
+						<div className='answer-btn' onClick={handleQuizP}>Yes</div>
+						<div className='answer-btn' onClick={handleQuizN}>No</div>
 					</div>
 					</div>
 				</div>
@@ -123,7 +291,7 @@ export default function Second_EN() {
 						<div className='top-description'>Make a <span style={{fontWeight:"700", borderBottom:"2px solid"}}>quick call</span> to claim your health subsidy!</div>
 						<div className='spots-count'>Spots remaining: 4</div>
 						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
-						<div className='call-btn'>
+						<div className='call-btn' onClick={handleCall}>
 							<a href = "tel:+18332464598">CALL (833)-246-4598</a>
 						</div>
 						<div className='sub-title'>We Have Reserved Your Spot</div>
