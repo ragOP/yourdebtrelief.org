@@ -10,8 +10,23 @@ a{
     font-size: 1.5rem;
     font-weight: 700;
   }
+
+  .top-sticky-blue{
+    padding: 0.75rem 16rem;
+    background-color: rgb(30 58 138);
+    color: white;
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: left;
+  }
   
   .main-container{
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-container-5{
     max-width: 48rem;
     margin-left: auto;
     margin-right: auto;
@@ -27,6 +42,11 @@ a{
     padding: 0.5rem 1rem;
     text-align: center;
   }
+
+  .main-descrition-5{
+    // padding: 0.5rem 1rem;
+    text-align: center;
+  }
   
   .topic-img{
     width: 80%;
@@ -36,8 +56,9 @@ a{
   .main-des-title{
     font-size: 1.875rem;
     line-height: 2.25rem;
-    font-weight: 700;
+    font-weight: 900;
     padding: 1rem 0;
+    color: #1f2937;
   }
   
   .mian-des-1{
@@ -52,6 +73,14 @@ a{
     line-height: 1.75rem;
     margin: 0.5rem 0;
     text-align: left;
+  }
+
+  .main-des-5{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0.5rem 0;
+    text-align: left;
+    color: #1f2937;
   }
   
   .main-des-2{
@@ -72,11 +101,18 @@ a{
     line-height: 2rem;
     font-weight: 700;
   }
+
+  .quiz-5{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    color: #1f2937;
+  }
   
   .answer{
     display: grid;
     grid-template-columns: repeat(1,minmax(0,1fr));
-    gap: 1.5rem;
+    gap: 0.5rem;
     margin-top: 1.5rem;
     justify-items: center;
   }
@@ -97,9 +133,30 @@ a{
     width: 75%;
     cursor: pointer;
   }
+
+  .answer-btn-5{
+    color: white;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    padding: 0.75rem;
+    background-color: rgb(34 197 94);
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+  }
   
   .answer-btn:hover{
     background-color: rgb(34, 155, 78);
+  }
+
+  .answer-btn-5:hover{
+    background-color: rgb(62, 233, 124);
   }
   
   .footer{
@@ -157,6 +214,14 @@ a{
     font-size: 1.5rem;
     line-height: 2rem;
   }
+
+  .top-description-5{
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    background-color: rgb(254 240 138);
+  }
   
   .top-description-false{
     margin-top: 0.5rem;
@@ -197,7 +262,7 @@ a{
   }
 
   .call-btn:hover{
-    background-color: rgb(34, 165, 82);
+    background-color: rgb(59, 236, 124);
   }
   
   .call-btn-false{
@@ -324,5 +389,41 @@ a{
       grid-template-columns:repeat(1, 1fr);
       padding: 30px 40px;
       gap: 20px;
+    }
+    .top-sticky-blue{
+      padding: 0.75rem;
+    }
+    .main-container-5{
+      padding: 0.25rem 1rem;
+    }
+    .main-des-title{
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+    .main-des-5{
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    .quiz-5{
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    .survey{
+      padding: 0;
+    }
+    .answer-btn-5{
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+    .checking{
+      margin:1rem;
+    }
+    .congrats{
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+    .top-description-5{
+      font-size: 1.25rem;
+      line-height: 1.75rem;
     }
   }

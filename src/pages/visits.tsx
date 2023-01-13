@@ -15,6 +15,7 @@ export default function Visits() {
         "https://dailyamericasavings.com/spanaca1",
         "https://dailyamericasavings.com/engaca2",
         "https://dailyamericasavings.com/spanaca2",
+        "https://dailyamericasavings.com/engmed1",
     ]
 
     const [selected, setSelected] = useState("https://dailyamericasavings.com/engaca1");
@@ -33,6 +34,9 @@ export default function Visits() {
         }
         if(event.target.value === "https://dailyamericasavings.com/spanaca2"){
             setFlag(4)
+        }
+        if(event.target.value === "https://dailyamericasavings.com/engmed1"){
+            setFlag(5)
         }
     }
 
