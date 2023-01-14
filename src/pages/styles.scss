@@ -53,6 +53,12 @@ a{
     margin-left: 10%;
   }
 
+  .topic-img-5{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 0.5rem;
+  }
+
   .main-des-title{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -399,10 +405,12 @@ a{
     .main-des-title{
       font-size: 1.25rem;
       line-height: 1.75rem;
+      padding:0;
     }
     .main-des-5{
       font-size: 1rem;
       line-height: 1.5rem;
+      margin-top: 0.5rem;
     }
     .quiz-5{
       font-size: 1.5rem;
