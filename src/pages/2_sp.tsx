@@ -257,7 +257,7 @@ export default function Second_SP() {
 					<img className='topic-img' src = {Head_bg} alt = "head" />
 					<div className='mian-des-1-left'>Los estadounidenses que ganen menos de $50,000 que NO tengan Medicaid o Medicare pueden activar sus beneficios de salud gratuitos a partir de esta semana. Todo lo que tiene que hacer es completar el cuestionario gratuito a continuación para ver si es elegible.</div>
 					<div className='mian-des-1-left'>Si es así, puede reclamar hasta $ 1400 / mes en beneficios de salud para cubrir completamente el costo del seguro de salud, dental, de la vista, tratamientos y más.</div>
-					<div className='mian-des-1-left'>¡Simplemente no espere demasiado, porque la fecha límite para reclamar su beneficio de $2800 finaliza el 15 de febrero!</div>
+					<div className='mian-des-1-left'>¡Simplemente no espere demasiado, porque la fecha límite para reclamar su beneficio de $2800 finaliza pronto!</div>
 					<div className='main-des-2'>Responda 2 preguntas simples a continuación para verificar la elegibilidad en solo 30 segundos:</div>
 					</div>
 					<div className='survey'>
