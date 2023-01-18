@@ -267,7 +267,7 @@ export default function Second_EN() {
 					<img className='topic-img' src = {Head_bg} alt = "head"/>
 					<div className='mian-des-1-left'>Americans making less than $50,000 that is NOT on Medicaid or Medicare can activate their Free Health Benefits starting this week. All you have to do is take the free quiz below to see if you're eligible.</div>
 					<div className='mian-des-1-left'>If you are, you can claim up to $1400/month in health benefits to completely cover the cost of health insurance, dental, vision, treatments, and more.</div>
-					<div className='mian-des-1-left'>Just don't wait too long, because the deadline to claim your $2800 benefit ends January 15th.!</div>
+					<div className='mian-des-1-left'>Just don't wait too long, because the deadline to claim your $2800 benefit ends February 15th.!</div>
 					<div className='main-des-2'>Answer 2 simple questions below to <span style={{borderBottom:"2px red solid"}}>check eligibility</span> in just 30 seconds:</div>
 					</div>
 					<div className='survey'>

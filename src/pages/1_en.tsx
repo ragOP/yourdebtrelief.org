@@ -255,7 +255,7 @@ export default function First_EN() {
 					<div className='main-descrition-bg'>
 					{/* <div className='main-des-title'>Biden Extends Free Health Subsidies For Americans Making Less Than $50k/year</div> */}
 					<img src = {Head_img} alt = "head" width = "100%" />
-					<div className='mian-des-1'>The deadline to lock in your health subsidy ends on <span style = {{fontWeight:"700"}}>January 15th</span>, so call the hotline if you qualify!</div>
+					<div className='mian-des-1'>The deadline to lock in your health subsidy ends on <span style = {{fontWeight:"700"}}>February 15th</span>, so call the hotline if you qualify!</div>
 					<div className='main-des-2'>Answer 2 simple questions below to check eligibility in just 30 seconds:</div>
 					</div>
 					<div className='survey'>
