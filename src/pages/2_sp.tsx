@@ -277,20 +277,22 @@ export default function Second_SP() {
 					<div className='checking'>
 					{(result === true)?
 						<>
-						<div className='congrats'>¡Felicitaciones, USTED CALIFICA!</div>
-						<div className='top-description'>¡Haga una llamada rápida para reclamar su subsidio de salud!</div>
-						<div className='spots-count'>Lugares restantes: 4</div>
-						<div className='tap-direction'>👇 TOCA ABAJO PARA LLAMAR 👇</div>
-						<div className='call-btn' onClick={handleCall}>
-							<a href = "tel:+18332464598">CALL (833)-246-4598</a>
-						</div>
-						<div className='sub-title'>Nosotras hemos reservado tu lugar</div>
-						<div className='sub-description'>Debido al alto volumen de llamadas, su agente oficial está esperando solo 3 minutos, luego su lugar no estará reservado.</div>
-						<div className='timer'>
-							<div className='timer-cell'>{min}</div>
-							<div className='timer-cell'>:</div>
-							<div className='timer-cell'>{second}</div>
-						</div>
+							<div className='congrats'>¡Felicitaciones, USTED CALIFICA!</div>
+							<div className='top-description'>¡Haga una llamada rápida para reclamar su subsidio de salud!</div>
+							<div className='spots-count'>Lugares restantes: 4</div>
+							<div className='tap-direction'>👇 TOCA ABAJO PARA LLAMAR 👇</div>
+							<a href = "tel:+18332464598">
+								<div className='call-btn' onClick={handleCall}>
+									CALL (833)-246-4598
+								</div>
+							</a>
+							<div className='sub-title'>Nosotras hemos reservado tu lugar</div>
+							<div className='sub-description'>Debido al alto volumen de llamadas, su agente oficial está esperando solo 3 minutos, luego su lugar no estará reservado.</div>
+							<div className='timer'>
+								<div className='timer-cell'>{min}</div>
+								<div className='timer-cell'>:</div>
+								<div className='timer-cell'>{second}</div>
+							</div>
 						</>:
 						<>
 						<div className='congrats-false'>Lo sentimos, no pudimos calificarlo para $2800 en beneficios de salud, ¡pero hay algo mejor para usted!</div>

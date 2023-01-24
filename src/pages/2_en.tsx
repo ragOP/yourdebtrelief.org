@@ -291,9 +291,11 @@ export default function Second_EN() {
 						<div className='top-description'>Make a <span style={{fontWeight:"700", borderBottom:"2px solid"}}>quick call</span> to claim your health subsidy!</div>
 						<div className='spots-count'>Spots remaining: 4</div>
 						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
-						<div className='call-btn' onClick={handleCall}>
-							<a href = "tel:+18332464598">CALL (833)-246-4598</a>
-						</div>
+						<a href = "tel:+18332464598">
+							<div className='call-btn' onClick={handleCall}>
+								CALL (833)-246-4598
+							</div>
+						</a>
 						<div className='sub-title'>We Have Reserved Your Spot</div>
 						<div className='sub-description'>Due to high call volume, your official agent is waiting for only <span style={{fontWeight:"700"}}>3 minutes</span>, then your spot will not be reserved.</div>
 						<div className='timer'>

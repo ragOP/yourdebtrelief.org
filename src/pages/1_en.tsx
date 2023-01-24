@@ -273,20 +273,22 @@ export default function First_EN() {
 					{step}
 					</div>:
 					<div className='checking'>
-					<div className='congrats'>Congratulations, YOU QUALIFY!</div>
-					<div className='top-description'>Make a quick call to claim your health subsidy!</div>
-					<div className='spots-count'>Spots remaining: 4</div>
-					<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
-					<div className='call-btn' onClick={handleCall}>
-						<a href = "tel:+18332464598">CALL (833)-246-4598</a>
-					</div>
-					<div className='sub-title'>We Have Reserved Your Spot</div>
-					<div className='sub-description'>Due to high call volume, your official agent is waiting for only 3 minutes, then your spot will not be reserved.</div>
-					<div className='timer'>
-						<div className='timer-cell'>{min}</div>
-						<div className='timer-cell'>:</div>
-						<div className='timer-cell'>{second}</div>
-					</div>
+						<div className='congrats'>Congratulations, YOU QUALIFY!</div>
+						<div className='top-description'>Make a quick call to claim your health subsidy!</div>
+						<div className='spots-count'>Spots remaining: 4</div>
+						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
+						<a href = "tel:+18332464598">
+							<div className='call-btn' onClick={handleCall}>
+								CALL (833)-246-4598
+							</div>
+						</a>
+						<div className='sub-title'>We Have Reserved Your Spot</div>
+						<div className='sub-description'>Due to high call volume, your official agent is waiting for only 3 minutes, then your spot will not be reserved.</div>
+						<div className='timer'>
+							<div className='timer-cell'>{min}</div>
+							<div className='timer-cell'>:</div>
+							<div className='timer-cell'>{second}</div>
+						</div>
 					</div>
 				)
 			}

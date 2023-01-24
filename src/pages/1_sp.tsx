@@ -285,20 +285,22 @@ export default function First_SP() {
                     <div className='checking'>
                     {(result === true)?
                         <>
-                        <div className='congrats'>¡Felicitaciones, USTED CALIFICA!</div>
-                        <div className='top-description'>¡Haga una llamada rápida para reclamar su subsidio de salud!</div>
-                        <div className='spots-count'>Lugares restantes: 4</div>
-                        <div className='tap-direction'>👇 TOCA ABAJO PARA LLAMAR 👇</div>
-                        <div className='call-btn' onClick={handleCall}>
-                            <a href = "tel:+18662270851">CALL (866)-227-0851</a>
-                        </div>
-                        <div className='sub-title'>Nosotras hemos reservado tu lugar</div>
-                        <div className='sub-description'>Debido al alto volumen de llamadas, su agente oficial está esperando solo 3 minutos, luego su lugar no estará reservado.</div>
-                        <div className='timer'>
-                            <div className='timer-cell'>{min}</div>
-                            <div className='timer-cell'>:</div>
-                            <div className='timer-cell'>{second}</div>
-                        </div>
+                            <div className='congrats'>¡Felicitaciones, USTED CALIFICA!</div>
+                            <div className='top-description'>¡Haga una llamada rápida para reclamar su subsidio de salud!</div>
+                            <div className='spots-count'>Lugares restantes: 4</div>
+                            <div className='tap-direction'>👇 TOCA ABAJO PARA LLAMAR 👇</div>
+                            <a href = "tel:+18662270851">
+                                <div className='call-btn' onClick={handleCall}>
+                                    CALL (866)-227-0851
+                                </div>
+                            </a>
+                            <div className='sub-title'>Nosotras hemos reservado tu lugar</div>
+                            <div className='sub-description'>Debido al alto volumen de llamadas, su agente oficial está esperando solo 3 minutos, luego su lugar no estará reservado.</div>
+                            <div className='timer'>
+                                <div className='timer-cell'>{min}</div>
+                                <div className='timer-cell'>:</div>
+                                <div className='timer-cell'>{second}</div>
+                            </div>
                         </>:
                         <div>Lo sentimos, no tiene derecho al subsidio sanitario!</div>
                     }
