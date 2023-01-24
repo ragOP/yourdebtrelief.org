@@ -96,6 +96,9 @@ export default function Third_EN() {
 	const [step, setStep] = useState("process")
 	const [min, setMin] = useState(3)
 	const [second, setSecond] = useState<any>(0)    
+	const [yes, setYes] = useState("Yes, I'm 65 or Older")
+	const [no, setNo] = useState("No, I'm 64 or Younger")
+	
 	
 	const stepProcess = () => {
 		if(step==="Reviewing Your Answers..."){
@@ -177,10 +180,12 @@ export default function Third_EN() {
 	const handleQuizP = () => {
 		topScroll("btn");
 		if(quiz === "Are you over 64?"){
-		setQuiz("Are You On Medicare or Medicaid?")
+			setQuiz("Are You On Medicare or Medicaid?")
+			setYes("Yes")
+			setNo("No")
 		}else{
-		setStep("Reviewing Your Answers...")
-		topScroll("top");
+			setStep("Reviewing Your Answers...")
+			topScroll("top");
 		}
 
 		axios
@@ -213,10 +218,12 @@ export default function Third_EN() {
 	const handleQuizN = () => {
 		topScroll("btn");
 		if(quiz === "Are you over 64?"){
-		setQuiz("Are You On Medicare or Medicaid?")
+			setQuiz("Are You On Medicare or Medicaid?")
+			setYes("Yes")
+			setNo("No")
 		}else{
-		setStep("Reviewing Your Answers...")
-		topScroll("top");
+			setStep("Reviewing Your Answers...")
+			topScroll("top");
 		}
 
 		axios
@@ -262,8 +269,8 @@ export default function Third_EN() {
 					<div className='survey'>
 					<div className='quiz-5' id='btn'>{quiz}</div>
 					<div className='answer'>
-						<div className='answer-btn-5' onClick={handleQuizP}>Yes</div>
-						<div className='answer-btn-5' onClick={handleQuizN}>No</div>
+						<div className='answer-btn-5' onClick={handleQuizP}>{yes}</div>
+						<div className='answer-btn-5' onClick={handleQuizN}>{no}</div>
 					</div>
 					</div>
 				</div>
@@ -274,20 +281,20 @@ export default function Third_EN() {
 					{step}
 					</div>:
 					<div className='checking'>
-					<div className='congrats'>Congratulations, YOU QUALIFY!</div>
-					<div className='top-description-5'>Make A <b>Quick Call</b> To Claim Your Health Subsidy!</div>
-					{/* <div className='spots-count'>Spots remaining: 4</div>
-					<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div> */}
-					<div className='call-btn' onClick={handleCall}>
-						<a href = "tel:+18332464598">CALL (833)-246-4598</a>
-					</div>
-					<div className='sub-title'>We Have Reserved Your Spot</div>
-					<div className='sub-description'>Due to high call volume, your official agent is waiting for only 3 minutes, then your spot will not be reserved.</div>
-					<div className='timer'>
-						<div className='timer-cell'>{min}</div>
-						<div className='timer-cell'>:</div>
-						<div className='timer-cell'>{second}</div>
-					</div>
+						<div className='congrats'>Congratulation, You Qualify!</div>
+						<div className='top-description-5'>Make A <b>Quick Call</b> To Claim Your Flex Card!</div>
+						{/* <div className='spots-count'>Spots remaining: 4</div>
+						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div> */}
+						<div className='call-btn' onClick={handleCall}>
+							<a href = "tel:+18332332885">Call (833) 233-2885</a>
+						</div>
+						<div className='sub-title'>We Have Reserved Your Spot</div>
+						<div className='sub-description'>Due to high call volume, your official agent is waiting for only <b>3 minutes</b>, then your spot will not be reserved.</div>
+						<div className='timer'>
+							<div className='timer-cell'>{min}</div>
+							<div className='timer-cell'>:</div>
+							<div className='timer-cell'>{second}</div>
+						</div>
 					</div>
 				)
 			}

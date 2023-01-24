@@ -198,6 +198,7 @@ a{
     margin-right: auto;
     font-size: 1.125rem;
     line-height: 1.75rem;
+    color: #1f2937;
   }
   
   .congrats{
@@ -265,6 +266,10 @@ a{
     // width: 100%;
     margin: 1rem 0;
     cursor: pointer;
+    border-radius: 0.5rem;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / .25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   }
 
   .call-btn:hover{
@@ -288,12 +293,13 @@ a{
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
-    margin-top: 2rem;
+    margin-top: 1.25rem;
   }
   
   .sub-description{
     font-size: 1rem;
     line-height: 1.5rem;
+    margin: 1rem 0;
   }
   
   .sub-description-false{
@@ -383,6 +389,7 @@ a{
     }
     .call-btn{
       font-size: 1.25rem;
+      line-height: 1.75rem;
     }
     .tap-direction{
       font-size: 1.1rem;
@@ -424,7 +431,7 @@ a{
       line-height: 2rem;
     }
     .checking{
-      margin:1rem;
+      margin:1.25rem 1rem;
     }
     .congrats{
       font-size: 1.25rem;
@@ -433,5 +440,9 @@ a{
     .top-description-5{
       font-size: 1.25rem;
       line-height: 1.75rem;
+    }
+    .sub-description{
+      font-size: .875rem;
+      line-height: 1.25rem;
     }
   }
