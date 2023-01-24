@@ -272,7 +272,7 @@ export default function Forth_EN() {
 				<>
 				<div className='main-container-5'>
 					<div className='main-descrition-5'>
-					<div className='main-des-title'>Biden Extends <b>FREE Solar Panels with 100% Free Installation </b> to all eligible homeowners soon.</div>
+					<div className='main-des-title-6'>Biden Extends <b>FREE Solar Panels with 100% Free Installation </b> to all eligible homeowners soon.</div>
 					{/* <img src = {Head_img} alt = "head" width = "100%" /> */}
                     <img className='topic-img-5' src = {Head_bg} alt = "head"/>
 					{/* <div className='main-des-5'>Biden Extends <b>FREE Solar Panels with 100% Free Installation </b> to all eligible homeowners soon. </div> */}
