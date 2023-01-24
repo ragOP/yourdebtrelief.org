@@ -299,7 +299,7 @@ export default function Forth_EN() {
 						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div> */}
 						<a href = "tel:+18338440942">
 							<div className='call-btn' onClick={handleCall}>
-								Call (833) 844-0942
+								CALL (833) 844-0942
 							</div>
 						</a>
 						<div className='sub-title'>We Have Reserved Your Spot</div>

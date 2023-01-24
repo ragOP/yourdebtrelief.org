@@ -287,7 +287,7 @@ export default function Third_EN() {
 						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div> */}
 						<a href = "tel:+18332332885">
 							<div className='call-btn' onClick={handleCall}>
-								Call (833) 233-2885
+								CALL (833) 233-2885
 							</div>
 						</a>
 						<div className='sub-title'>We Have Reserved Your Spot</div>
