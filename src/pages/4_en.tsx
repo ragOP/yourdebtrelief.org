@@ -295,8 +295,8 @@ export default function Forth_EN() {
 					<div className='checking'>
 						<div className='congrats'>Congratulation, You Qualify!</div>
 						<div className='top-description-5'>Make A <b>Quick Call</b> To get your Free Solar!</div>
-						{/* <div className='spots-count'>Spots remaining: 4</div>
-						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div> */}
+						<div className='spots-count'>Spots remaining: 4</div>
+						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
 						<a href = "tel:+18338440942">
 							<div className='call-btn' onClick={handleCall}>
 								CALL (833) 844-0942
