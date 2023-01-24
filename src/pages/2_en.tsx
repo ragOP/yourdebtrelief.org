@@ -288,7 +288,7 @@ export default function Second_EN() {
 					{/* {(result === true)?
 						<> */}
 						<div className='congrats'>Congratulations, YOU QUALIFY!</div>
-						<div className='top-description'>Make a <span style={{fontWeight:"700", borderBottom:"2px solid"}}>quick call</span> to claim your health subsidy!</div>
+						<div className='top-description'>Make a <span style={{fontWeight:"700", borderBottom:"2px solid"}}>quick call</span> to get your Free Solar subsidy!</div>
 						<div className='spots-count'>Spots remaining: 4</div>
 						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
 						<div className='call-btn' onClick={handleCall}>
