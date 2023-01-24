@@ -275,7 +275,7 @@ export default function Forth_EN() {
 					<div className='main-des-title-6'>Biden Extends <b>FREE Solar Panels with 100% Free Installation </b> to all eligible homeowners soon.</div>
 					{/* <img src = {Head_img} alt = "head" width = "100%" /> */}
                     <img className='topic-img-5' src = {Head_bg} alt = "head"/>
-					<div className='main-des-5'>Its <b> completely FREE </b> and takes just 60-Seconds to check if your Home qualifies for the<b> Free Solar Subsidy </b>!</div>
+					<div className='main-des-5'>Its completely FREE and takes just 60-Seconds to check if your Home qualifies for the Free Solar Subsidy!</div>
 					<div className='main-des-5' style = {{marginTop:"1rem"}}>Answer <b>3 questions below </b>to check if your HOME qualifies now 👇</div>
 					</div>
 					<div className='survey'>
