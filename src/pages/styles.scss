@@ -272,6 +272,13 @@ a{
     font-weight: 700;
     margin-top: 2rem;
   }
+
+  .tap-direction-span{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    margin-top: 2rem;
+  }
   
   .call-btn{
     font-size: 1.5rem;
@@ -308,6 +315,13 @@ a{
   }
   
   .sub-title{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin-top: 1.25rem;
+  }
+
+  .sub-title-span{
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
@@ -405,12 +419,18 @@ a{
     .sub-title{
       font-size: 1.125rem;
     }
+    .sub-title-span{
+      font-size: 1rem;
+    }
     .call-btn{
       font-size: 1.35rem;
       line-height: 1.75rem;
     }
     .tap-direction{
       font-size: 1.1rem;
+    }
+    .tap-direction-span{
+      font-size: 1rem;
     }
     .topic-img{
       width: 100%;

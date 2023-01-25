@@ -284,13 +284,13 @@ export default function Third_SP() {
 						<div className='congrats'>¡Felicitaciones, usted califica!</div>
 						<div className='top-description-5'>¡Haga Una <b>Llamada Rápida</b> Para Reclamar Su Tarjeta Flex!</div>
 						<div className='spots-count'>Lugares restantes: 4</div>
-						<div className='tap-direction'>👇 TOCA ABAJO PARA LLAMAR 👇</div>
+						<div className='tap-direction-span'>👇 TOCA ABAJO PARA LLAMAR 👇</div>
 						<a href = "tel:+18332332885">
 							<div className='call-btn' onClick={handleCall}>
 								CALL (833) 233-2885
 							</div>
 						</a>
-						<div className='sub-title'>Nosotras Hemos Reservado Tu Lugar</div>
+						<div className='sub-title-span'>Nosotras Hemos Reservado Tu Lugar</div>
 						<div className='sub-description'>Debido al alto volumen de llamadas, su agente oficial está esperando solo <b> 3 minutos </b>, luego su lugar no estará reservado.</div>
 						<div className='timer'>
 							<div className='timer-cell'>{min}</div>
