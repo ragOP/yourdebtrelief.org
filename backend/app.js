@@ -53,10 +53,10 @@ app.use(function (err, req, res, next) {
   res.status(err.statusCode).send(err.message);
 });
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/build"));
 
 app.get("/*", function (req, res) {
-  res.sendFile(__dirname + "/public/index.html", function (err) {
+  res.sendFile(__dirname + "/build/index.html", function (err) {
     if (err) {
       res.status(500).send(err);
     }

@@ -282,9 +282,9 @@ export default function Forth_EN() {
 				<>
 				<div className='main-container-5'>
 					<div className='main-descrition-5'>
-					<div className='main-des-title-6'>Biden Extends <b>FREE Solar Panels with 100% Free Installation </b> to all eligible homeowners soon.</div>
+					<div className='main-des-title-6'>Finally, Big Relief for American Homeowners:<br />People are RUSHING to Claim their Free Solar Panels after the announcement of this 2023 Clean Energy Program</div>
 					{/* <img src = {Head_img} alt = "head" width = "100%" /> */}
-                    <img className='topic-img-5' src = {Head_bg} alt = "head"/>
+                    <img className='topic-img-larger' src = {Head_bg} alt = "head"/>
 					<div className='main-des-5'>Most American Homeowners can get Solar Panels installed for $0 under this 2023 Clean Energy Program that covers ALL the expenses for you</div>
 					<div className='main-des-5' style = {{marginTop:"1rem"}}>The opportunity to claim FREE Solar Panels ends on <b>March 31st</b> so it's best to check your eligibility and lock your Free Solar Subsidy while you still can:</div>
 					</div>
