@@ -283,7 +283,7 @@ export default function Forth_EN() {
 				<div className='main-container-5'>
 					<div className='main-descrition-5'>
 					{/* <div className='main-des-title-smaller'><b>Finally, Big Relief for American Homeowners:</b></div> */}
-					<div className='main-des-title-6'><b>Homeowners are RUSHING to Claim their<span style={{backgroundColor:"#fde047"}}> Free Solar Panels </span>after the announcement of this 2023 Clean Energy Program</b></div>
+					<div className='main-des-title-6'><b>Homeowners are RUSHING to Claim their<span style={{backgroundColor:"#fde047"}}> Free Solar Panels</span> after the announcement of this 2023 Clean Energy Program</b></div>
 					{/* <img src = {Head_img} alt = "head" width = "100%" /> */}
                     <img className='topic-img-larger' src = {Head_bg} alt = "head"/>
 					<div className='main-des-5'>Most American Homeowners can get Solar Panels installed for $0 under this 2023 Clean Energy Program that covers ALL the expenses for you</div>
