@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react';
+//@ts-ignore
+import TagManager from 'react-gtm-module'
 import axios from "axios";
 import './styles.scss'
 
@@ -6,6 +8,15 @@ import { scrollTo } from '../utils';
 
 import Head_img from '../assets/headline.png'
 import Head_bg from '../assets/14_head.png'
+
+
+// google tag manager
+
+const tagManagerArgs = {
+    gtmId: 'GTM-5H3DC4F'
+}
+
+TagManager.initialize(tagManagerArgs)
 
 export default function Second_EN() {
 
