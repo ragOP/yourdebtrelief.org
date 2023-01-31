@@ -25,7 +25,7 @@ function App() {
           <Route path = "/spanmed1" element = {<Third_SP />} />
           <Route path = "/hbosolar" element = {<Forth_EN />} />
 
-          <Route path = "/daily-america-savings-view" element = {<Visits />} />
+          <Route path = "/view" element = {<Visits />} />
         </Routes>
       </div>
     </Router>
