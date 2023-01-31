@@ -286,8 +286,8 @@ export default function Forth_EN() {
 					<div className='main-des-title-6'><b>Homeowners are RUSHING to Claim their<span style={{backgroundColor:"#fde047"}}> Free Solar Panels</span> after the announcement of this 2023 Clean Energy Program</b></div>
 					{/* <img src = {Head_img} alt = "head" width = "100%" /> */}
                     <img className='topic-img-larger' src = {Head_bg} alt = "head"/>
-					<div className='main-des-5'>Most American Homeowners can get Solar Panels installed for $0 under this 2023 Clean Energy Program that covers ALL the expenses for you</div>
-					<div className='main-des-5' style = {{marginTop:"1rem"}}>The opportunity to claim FREE Solar Panels ends on <b>March 31st</b> so it's best to check your eligibility and lock your Free Solar Subsidy while you still can:</div>
+					<div className='main-des-5'>Most American Homeowners can get Solar Panels installed for <b> $0 under this 2023 Clean Energy Program </b> that covers ALL the expenses for you.</div>
+					<div className='main-des-5' style = {{marginTop:"1rem"}}><b>The opportunity to claim FREE Solar Panels ends on March 31st</b> so it's best to check your eligibility and lock your Free Solar Subsidy while you still can:</div>
 					</div>
 					<div className='survey'>
 					<div className='quiz-5' id='btn'>{quiz}</div>
@@ -305,7 +305,7 @@ export default function Forth_EN() {
 					</div>:
 					<div className='checking'>
 						<div className='congrats'>Congratulation, You Qualify!</div>
-						<div className='top-description-5'>Make A <b>Quick Call</b> To get your Free Solar!</div>
+						<div className='top-description-5'>Make A <b> Quick Call </b> To Claim Your Free Solar Panels Now!</div>
 						<div className='spots-count'>Spots remaining: 4</div>
 						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
 						<a href = "tel:+18338440942">
