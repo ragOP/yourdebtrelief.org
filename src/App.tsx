@@ -8,6 +8,7 @@ import Second_SP from "./pages/2_sp";
 import Third_EN from './pages/3_en';
 import Third_SP from './pages/3_sp';
 import Forth_EN from './pages/4_en';
+import Fifth_SP from './pages/5_sp';
 
 import Visits from "./pages/visits";
 
@@ -24,6 +25,7 @@ function App() {
           <Route path = "/engmed1" element = {<Third_EN />} />
           <Route path = "/spanmed1" element = {<Third_SP />} />
           <Route path = "/hbosolar" element = {<Forth_EN />} />
+          <Route path = "/spandeb1" element = {<Fifth_SP />} />
 
           <Route path = "/view" element = {<Visits />} />
         </Routes>
