@@ -285,7 +285,7 @@ export default function Fifth_SP() {
 						{/* <div className='main-des-title-smaller'><b>Finally, Big Relief for American Homeowners:</b></div> */}
 							<div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div>
 							{/* <img src = {Head_img} alt = "head" width = "100%" /> */}
-							<img className='topic-img-5' src = {Head_bg} alt = "head"/>
+							<img className='topic-img-middle' src = {Head_bg} alt = "head"/>
 							<div className='main-des-5'>Los deudores están eliminando hasta el 100% de su deuda bajo este programa respaldado por abogados y USTED TAMBIÉN PUEDE.</div>
 							<div className='main-des-5' style = {{marginTop:"1rem"}}>La mejor parte es que, si califica después de responder las 3 preguntas a continuación, obtiene una llamada de consulta GRATUITA con un agente calificado de nuestro equipo que ha llevado el perdón financiero a más de 200,000 deudores en todo el país.</div>
 							<div className='main-des-5' style = {{marginTop:"1rem"}}>La oportunidad de reclamar una consulta 100% GRATUITA finaliza el 10 de febrero, por lo que es mejor verificar su elegibilidad y hacer su llamada gratuita mientras aún puede:?</div>
