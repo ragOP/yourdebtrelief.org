@@ -11,7 +11,7 @@ import Head_img from '../assets/headline.png'
 // google tag manager
 
 const tagManagerArgs = {
-    gtmId: 'GTM-P8TFPF9'
+    gtmId: 'GTM-NN8CZ6D'
 }
 
 TagManager.initialize(tagManagerArgs)
