@@ -272,11 +272,11 @@ export default function Fifth_EN() {
 				<>
 				<div className='main-container-5'>
 					<div className='main-descrition-5'>
-						<div className='main-des-title'>Millions of Business Owners Nationwide are getting FREE Stimulus Check of upto $26,000 per employee under this Congress-Approved Program. Here's how!</div>
+						<div className='main-des-title'>Millions of Business Owners Nationwide are getting<span style={{backgroundColor:"#fde047"}}> FREE Stimulus Check of upto $26,000</span> per employee under this Congress-Approved Program. Here's how!</div>
 						{/* <img src = {Head_img} alt = "head" width = "100%" /> */}
-						<img className='topic-img-5' src = {Head_bg} alt = "head"/>
+						<img className='topic-img-middle' src = {Head_bg} alt = "head"/>
 						<div className='main-des-5'>Americans Business owners can qualify for a Free Stimulus Check of upto $26,000 per employee (that they kept on payroll in 2020 and or 2021). This is not a loan, this is Free Money that business owners can use in anything they wish.</div>
-						<div className='main-des-5' style = {{marginTop:"1rem"}}>The opportunity to claim your Stimulus Check (if eligible) ends on March 31st so it's best to check your eligibility now - its as easy as answering the 3 questions below:</div>
+						<div className='main-des-5' style = {{marginTop:"1rem"}}><b>The opportunity to claim your Stimulus Check</b> (if eligible) <b>ends on March 31st so it's best to check your eligibility now - its as easy as answering the 3 questions below:</b></div>
 					</div>
 					<div className='survey'>
 						<div className='quiz-5' id='btn'>{quiz}</div>
@@ -294,7 +294,7 @@ export default function Fifth_EN() {
 					</div>:
 					<div className='checking'>
 						<div className='congrats'>Congratulation, You Qualify!</div>
-						<div className='top-description-5'>Make A <b>Quick Call</b> and Speak to our Qualified Agent on how you can Claim Your Stimulus Check as soon as possible!</div>
+						<div className='top-description-5'>Make A <b>Quick Call</b> and Speak to our Qualified Agent on how you can <b>Claim Your Stimulus Check</b> as soon as possible!</div>
 						<div className='spots-count'>Spots remaining: 4</div>
 						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
 						<a href = "tel:+18338440765">
