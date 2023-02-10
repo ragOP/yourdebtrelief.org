@@ -11,7 +11,7 @@ import Head_bg from '../assets/hero9.png'
 // google tag manager
 
 const tagManagerArgs = {
-    gtmId: 'GTM-MVTJCCJ'
+    gtmId: 'GTM-TGC6H5J'
 }
 
 TagManager.initialize(tagManagerArgs)
@@ -102,12 +102,10 @@ export default function Fifth_EN() {
 	}
 
 
-	const [quiz, setQuiz] = useState("Are you over 64?")
+	const [quiz, setQuiz] = useState("Are you a Business Owner in the US?")
 	const [step, setStep] = useState("process")
 	const [min, setMin] = useState(3)
 	const [second, setSecond] = useState<any>(0)    
-	const [yes, setYes] = useState("Yes, I'm 65 or Older")
-	const [no, setNo] = useState("No, I'm 64 or Younger")
 	
 	
 	const stepProcess = () => {
@@ -189,13 +187,15 @@ export default function Fifth_EN() {
 
 	const handleQuizP = () => {
 		topScroll("btn");
-		if(quiz === "Are you over 64?"){
-			setQuiz("Are You On Medicare or Medicaid?")
-			setYes("Yes")
-			setNo("No")
+		if(quiz === "Are you a Business Owner in the US?"){
+			setQuiz("Did you have Employees on payroll in 2020 and or 2021?")
 		}else{
-			setStep("Reviewing Your Answers...")
-			topScroll("top");
+			if(quiz === "Did you have Employees on payroll in 2020 and or 2021?"){
+				setQuiz("Is your Annual Turnover more than $50,000?")
+			}else{
+				setStep("Reviewing Your Answers...")
+				topScroll("top");
+			}
 		}
 
 		axios
@@ -227,13 +227,15 @@ export default function Fifth_EN() {
 
 	const handleQuizN = () => {
 		topScroll("btn");
-		if(quiz === "Are you over 64?"){
-			setQuiz("Are You On Medicare or Medicaid?")
-			setYes("Yes")
-			setNo("No")
+		if(quiz === "Are you a Business Owner in the US?"){
+			setQuiz("Did you have Employees on payroll in 2020 and or 2021?")
 		}else{
-			setStep("Reviewing Your Answers...")
-			topScroll("top");
+			if(quiz === "Did you have Employees on payroll in 2020 and or 2021?"){
+				setQuiz("Is your Annual Turnover more than $50,000?")
+			}else{
+				setStep("Reviewing Your Answers...")
+				topScroll("top");
+			}
 		}
 
 		axios
@@ -279,8 +281,8 @@ export default function Fifth_EN() {
 					<div className='survey'>
 						<div className='quiz-5' id='btn'>{quiz}</div>
 						<div className='answer'>
-							<div className='answer-btn-5' onClick={handleQuizP}>{yes}</div>
-							<div className='answer-btn-5' onClick={handleQuizN}>{no}</div>
+							<div className='answer-btn-5' onClick={handleQuizP}>Yes</div>
+							<div className='answer-btn-5' onClick={handleQuizN}>No</div>
 						</div>
 					</div>
 				</div>
@@ -292,12 +294,12 @@ export default function Fifth_EN() {
 					</div>:
 					<div className='checking'>
 						<div className='congrats'>Congratulation, You Qualify!</div>
-						<div className='top-description-5'>Make A <b>Quick Call</b> To Claim Your Flex Card!</div>
+						<div className='top-description-5'>Make A <b>Quick Call</b> and Speak to our Qualified Agent on how you can Claim Your Stimulus Check as soon as possible!</div>
 						<div className='spots-count'>Spots remaining: 4</div>
 						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
-						<a href = "tel:+18332332885">
+						<a href = "tel:+18338440765">
 							<div className='call-btn' onClick={handleCall}>
-								CALL (833) 233-2885
+								CALL (833) 844-0765
 							</div>
 						</a>
 						<div className='sub-title'>We Have Reserved Your Spot</div>
