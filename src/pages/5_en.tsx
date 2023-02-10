@@ -276,7 +276,7 @@ export default function Fifth_EN() {
 						{/* <img src = {Head_img} alt = "head" width = "100%" /> */}
 						<img className='topic-img-middle' src = {Head_bg} alt = "head"/>
 						<div className='main-des-5'>Americans Business owners can qualify for a Free Stimulus Check of upto $26,000 per employee that they kept on payroll in 2020 and or 2021. This is not a loan, this is Free Money that business owners can use in anything they wish.</div>
-						<div className='main-des-5' style = {{marginTop:"1rem"}}><b>The opportunity to claim your Stimulus Check</b> (if eligible) <b>ends on March 31st</b> so it's best to check your eligibility now - its as easy as answering the 3 questions below:</div>
+						<div className='main-des-5' style = {{marginTop:"1rem"}}><b>The opportunity to claim your Stimulus Check</b> (if eligible) <b>ends on March 31st</b> so it's best to check your eligibility now. Its as easy as answering the 3 questions below:</div>
 					</div>
 					<div className='survey'>
 						<div className='quiz-5' id='btn'>{quiz}</div>
