@@ -294,9 +294,9 @@ export default function Forth_SP() {
 						<div className='top-description-5'>¡Haga Una <b>Llamada Rápida</b> Para Reclamar Su Tarjeta Flex!</div>
 						<div className='spots-count'>Lugares restantes: 4</div>
 						<div className='tap-direction'>👇 TOCA ABAJO PARA LLAMAR 👇</div>
-						<a href = "tel:+18332332885">
+						<a href = "tel:+18332464484">
 							<div className='call-btn' onClick={handleCall}>
-								CALL (833) 233-2885
+								CALL (833) 246-4484
 							</div>
 						</a>
 						<div className='sub-title'>Nosotras Hemos Reservado Tu Lugar</div>
