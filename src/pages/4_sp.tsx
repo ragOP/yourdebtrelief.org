@@ -269,8 +269,8 @@ export default function Forth_SP() {
 				<>
 				<div className='main-container-5'>
 					<div className='main-descrition-5'>
-						<div className='main-des-title'>Los estadounidenses mayores de 50 años perciben esta prestación de gastos finales de 41.000 $ que cubre el 100% de los gastos funerarios! Le explicamos cómo.</div>
-						<img className='topic-img-5' src = {Head_bg} alt = "head"/>
+						<div className='main-des-title'>Los estadounidenses mayores de 50 años perciben esta prestación de gastos finales de 41.000 $ que cubre el 100% de los gastos funerarios. Le explicamos cómo!</div>
+						<img className='topic-img-middle' src = {Head_bg} alt = "head"/>
 						<div className='main-des-5'>Los estadounidenses mayores de 50 años pueden precalificar para este programa de gastos finales de 2023 que cubre el 100 % de los costos del funeral.</div>
 						<div className='main-des-5' style = {{marginTop:"1rem"}}>La oportunidad de actualizar sus beneficios finaliza el 31 de marzo, por lo que es mejor llamar y obtener su beneficio de gastos finales mientras aún está disponible. </div>
 						<div className='main-des-5' style = {{marginTop:"1rem"}}>¡Responda el cuestionario a continuación para verificar si es elegible!</div>
@@ -291,7 +291,7 @@ export default function Forth_SP() {
 					</div>:
 					<div className='checking'>
 						<div className='congrats'>¡Felicitaciones, usted califica!</div>
-						<div className='top-description-5'>¡Haga Una <b>Llamada Rápida</b> Para Reclamar Su Tarjeta Flex!</div>
+						<div className='top-description-5'>Haga Una <b>LLlamada Rápida</b> Para Reclamar Su Beneficio De Gastos Finales Ahora!</div>
 						<div className='spots-count'>Lugares restantes: 4</div>
 						<div className='tap-direction'>👇 TOCA ABAJO PARA LLAMAR 👇</div>
 						<a href = "tel:+18332464484">
