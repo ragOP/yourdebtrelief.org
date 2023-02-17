@@ -264,7 +264,7 @@ export default function Forth_SP() {
 
     return(
         <div>
-			<div className='top-sticky-blue' id='top'>My Senior Saving Journal</div>
+			<div className='top-sticky-blue' id='top'>USA Savings Journal</div>
 			{step==="process"?
 				<>
 				<div className='main-container-5'>
