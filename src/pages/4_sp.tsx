@@ -181,14 +181,8 @@ export default function Forth_SP() {
 			setYes("Sí")
 			setNo("No")
 		}else{
-			if(quiz === "¿Tiene número de la Seguridad Social?"){
-				setQuiz("¿Dispone de 10 minutos para hablar con uno de nuestros agentes cualificados y solicitar esta prestación?")
-				setYes("Sí")
-				setNo("No")
-			}else{
-				setStep("Revisando sus respuestas...")
-				topScroll("top");
-			}
+			setStep("Revisando sus respuestas...")
+			topScroll("top");
 		}
 
 		axios
@@ -225,14 +219,8 @@ export default function Forth_SP() {
 			setYes("Sí")
 			setNo("No")
 		}else{
-			if(quiz === "¿Tiene número de la Seguridad Social?"){
-				setQuiz("¿Dispone de 10 minutos para hablar con uno de nuestros agentes cualificados y solicitar esta prestación?")
-				setYes("Sí")
-				setNo("No")
-			}else{
-				setStep("Revisando sus respuestas...")
-				topScroll("top");
-			}
+			setStep("Revisando sus respuestas...")
+			topScroll("top");
 		}
 
 		axios
