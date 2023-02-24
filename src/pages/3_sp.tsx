@@ -157,14 +157,9 @@ export default function Third_SP() {
 			const startTime:any = new Date();
 			const timer = setInterval(()=> {
 			  const nowTime:any = new Date();
-			  // setMin(min+1)
 			  setSecond((180-Math.round((nowTime-startTime)/1000))%60)
 			  setMin(Math.floor((180-Math.round((nowTime-startTime)/1000))/60))
 			}, 1000)
-			// if(Math.round((new Date()-startTime)/1000)){
-			// 	console.log("dsfdsfdsf");
-			// 	return clearInterval(timer)
-			// }
 		}
 	}
 
@@ -259,11 +254,10 @@ export default function Third_SP() {
 				<>
 				<div className='main-container-5'>
 					<div className='main-descrition-5'>
-					<div className='main-des-title'>Los estadounidenses mayores de 64 años ahora pueden calificar para la tarjeta FLEX de $3600 en 2023. ¡Así es como!</div>
-					{/* <img src = {Head_img} alt = "head" width = "100%" /> */}
-                    <img className='topic-img-5' src = {Head_bg} alt = "head"/>
-					<div className='main-des-5'>Los estadounidenses mayores de 64 años pueden precalificar para la tarjeta Flex Spending Card 2023 que les otorga hasta $3600. Las personas mayores pueden usar los fondos para servicios dentales o de la vista, comestibles, alquiler, facturas de servicios públicos, medicamentos y más.</div>
-					<div className='main-des-5' style = {{marginTop:"1rem"}}><b>La oportunidad de actualizar sus beneficios finaliza el 31 de marzo</b> por lo tanto, es mejor llamar y bloquear su Tarjeta Flex mientras aún esté disponible.</div>
+						<div className='main-des-title'>Los estadounidenses mayores de 64 años ahora pueden calificar para la tarjeta FLEX de $3600 en 2023. ¡Así es como!</div>
+						<img className='topic-img-5' src = {Head_bg} alt = "head"/>
+						<div className='main-des-5'>Los estadounidenses mayores de 64 años pueden precalificar para la tarjeta Flex Spending Card 2023 que les otorga hasta $3600. Las personas mayores pueden usar los fondos para servicios dentales o de la vista, comestibles, alquiler, facturas de servicios públicos, medicamentos y más.</div>
+						<div className='main-des-5' style = {{marginTop:"1rem"}}><b>La oportunidad de actualizar sus beneficios finaliza el 31 de marzo</b> por lo tanto, es mejor llamar y bloquear su Tarjeta Flex mientras aún esté disponible.</div>
 					</div>
 					<div className='survey'>
 					<div className='quiz-5' id='btn'>{quiz}</div>

@@ -157,7 +157,6 @@ export default function Forth_SP() {
 			const startTime:any = new Date();
 			const timer = setInterval(()=> {
 			  const nowTime:any = new Date();
-			  // setMin(min+1)
 			  setSecond((180-Math.round((nowTime-startTime)/1000))%60)
 			  setMin(Math.floor((180-Math.round((nowTime-startTime)/1000))/60))
 			}, 1000)
@@ -169,8 +168,6 @@ export default function Forth_SP() {
 	}, [step])
 
 	const topScroll = (id: any) => {
-			// window.scrollTo(0, 0);
-			// window.innerWidth < 1200 ? setIsMobile(false) : scrollTo({ id });
 			scrollTo({ id });
 		}
 

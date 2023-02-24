@@ -157,24 +157,11 @@ export default function Forth_EN() {
 			const startTime:any = new Date();
 			const timer = setInterval(()=> {
 			  const nowTime:any = new Date();
-			  // setMin(min+1)
 			  setSecond((180-Math.round((nowTime-startTime)/1000))%60)
 			  setMin(Math.floor((180-Math.round((nowTime-startTime)/1000))/60))
 			}, 1000)
-			// if(Math.round((new Date()-startTime)/1000)){
-			// 	console.log("dsfdsfdsf");
-			// 	return clearInterval(timer)
-			// }
 		}
 	}
-
-	// React.useEffect(() => {
-	//                 // getInfo()
-	//                 console.log(time);
-	//                 stepProcess()
-	//                 const timer = setTimeout(() => setTime(+new Date()), 1000)
-	//                 return () => clearTimeout(timer)
-	//         }, [time]);
 
 
 	useEffect(() => {
@@ -182,8 +169,6 @@ export default function Forth_EN() {
 	}, [step])
 
 	const topScroll = (id: any) => {
-			// window.scrollTo(0, 0);
-			// window.innerWidth < 1200 ? setIsMobile(false) : scrollTo({ id });
 			scrollTo({ id });
 		}
 
@@ -282,12 +267,10 @@ export default function Forth_EN() {
 				<>
 				<div className='main-container-5'>
 					<div className='main-descrition-5'>
-					{/* <div className='main-des-title-smaller'><b>Finally, Big Relief for American Homeowners:</b></div> */}
-					<div className='main-des-title-6'><b>Homeowners are RUSHING to Claim their<span style={{backgroundColor:"#fde047"}}> Free Solar Panels</span> after the announcement of this 2023 Clean Energy Program!</b></div>
-					{/* <img src = {Head_img} alt = "head" width = "100%" /> */}
-                    <img className='topic-img-larger' src = {Head_bg} alt = "head"/>
-					<div className='main-des-5'>Most American Homeowners can get Solar Panels installed for <b> $0 under this 2023 Clean Energy Program </b> that covers ALL the expenses for you.</div>
-					<div className='main-des-5' style = {{marginTop:"1rem"}}><b>The opportunity to claim FREE Solar Panels ends on March 31st</b> so it's best to check your eligibility and lock your Free Solar Subsidy while you still can:</div>
+						<div className='main-des-title-6'><b>Homeowners are RUSHING to Claim their<span style={{backgroundColor:"#fde047"}}> Free Solar Panels</span> after the announcement of this 2023 Clean Energy Program!</b></div>
+						<img className='topic-img-larger' src = {Head_bg} alt = "head"/>
+						<div className='main-des-5'>Most American Homeowners can get Solar Panels installed for <b> $0 under this 2023 Clean Energy Program </b> that covers ALL the expenses for you.</div>
+						<div className='main-des-5' style = {{marginTop:"1rem"}}><b>The opportunity to claim FREE Solar Panels ends on March 31st</b> so it's best to check your eligibility and lock your Free Solar Subsidy while you still can:</div>
 					</div>
 					<div className='survey'>
 					<div className='quiz-5' id='btn'>{quiz}</div>

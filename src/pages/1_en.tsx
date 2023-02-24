@@ -154,33 +154,17 @@ export default function First_EN() {
 			const startTime:any = new Date();
 			const timer = setInterval(()=> {
 			  const nowTime:any = new Date();
-			  // setMin(min+1)
 			  setSecond((180-Math.round((nowTime-startTime)/1000))%60)
 			  setMin(Math.floor((180-Math.round((nowTime-startTime)/1000))/60))
 			}, 1000)
-			// if(Math.round((new Date()-startTime)/1000)){
-			// 	console.log("dsfdsfdsf");
-			// 	return clearInterval(timer)
-			// }
 		}
 	}
-
-	// React.useEffect(() => {
-	//                 // getInfo()
-	//                 console.log(time);
-	//                 stepProcess()
-	//                 const timer = setTimeout(() => setTime(+new Date()), 1000)
-	//                 return () => clearTimeout(timer)
-	//         }, [time]);
-
 
 	useEffect(() => {
 		stepProcess()
 	}, [step])
 
 	const topScroll = (id: any) => {
-			// window.scrollTo(0, 0);
-			// window.innerWidth < 1200 ? setIsMobile(false) : scrollTo({ id });
 			scrollTo({ id });
 		}
 
@@ -263,7 +247,6 @@ export default function First_EN() {
 				<>
 				<div className='main-container'>
 					<div className='main-descrition-bg'>
-					{/* <div className='main-des-title'>Biden Extends Free Health Subsidies For Americans Making Less Than $50k/year</div> */}
 					<img src = {Head_img} alt = "head" width = "100%" />
 					<div className='mian-des-1'>The deadline to lock in your health subsidy ends <span style = {{fontWeight:"700"}}>soon</span>, so call the hotline if you qualify!</div>
 					<div className='main-des-2'>Answer 2 simple questions below to check eligibility in just 30 seconds:</div>

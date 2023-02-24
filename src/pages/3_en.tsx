@@ -157,33 +157,17 @@ export default function Third_EN() {
 			const startTime:any = new Date();
 			const timer = setInterval(()=> {
 			  const nowTime:any = new Date();
-			  // setMin(min+1)
 			  setSecond((180-Math.round((nowTime-startTime)/1000))%60)
 			  setMin(Math.floor((180-Math.round((nowTime-startTime)/1000))/60))
 			}, 1000)
-			// if(Math.round((new Date()-startTime)/1000)){
-			// 	console.log("dsfdsfdsf");
-			// 	return clearInterval(timer)
-			// }
 		}
 	}
-
-	// React.useEffect(() => {
-	//                 // getInfo()
-	//                 console.log(time);
-	//                 stepProcess()
-	//                 const timer = setTimeout(() => setTime(+new Date()), 1000)
-	//                 return () => clearTimeout(timer)
-	//         }, [time]);
-
 
 	useEffect(() => {
 		stepProcess()
 	}, [step])
 
 	const topScroll = (id: any) => {
-			// window.scrollTo(0, 0);
-			// window.innerWidth < 1200 ? setIsMobile(false) : scrollTo({ id });
 			scrollTo({ id });
 		}
 
@@ -270,11 +254,10 @@ export default function Third_EN() {
 				<>
 				<div className='main-container-5'>
 					<div className='main-descrition-5'>
-					<div className='main-des-title'>Americans Over 64 Can Now Qualify For The $3600 FLEX Card In 2023. Here's How!</div>
-					{/* <img src = {Head_img} alt = "head" width = "100%" /> */}
-                    <img className='topic-img-5' src = {Head_bg} alt = "head"/>
-					<div className='main-des-5'>Americans over 64 can pre-qualify for the 2023 Flex Spending Card that gives them up to $3600. Seniors can use the funds for dental or vision, groceries, rent, utility bills, medication and more.</div>
-					<div className='main-des-5' style = {{marginTop:"1rem"}}><b>The opportunity to upgrade your benefits ends on March 31st</b> so it's best to call and get your Flex Card locked in while it's still available.</div>
+						<div className='main-des-title'>Americans Over 64 Can Now Qualify For The $3600 FLEX Card In 2023. Here's How!</div>
+						<img className='topic-img-5' src = {Head_bg} alt = "head"/>
+						<div className='main-des-5'>Americans over 64 can pre-qualify for the 2023 Flex Spending Card that gives them up to $3600. Seniors can use the funds for dental or vision, groceries, rent, utility bills, medication and more.</div>
+						<div className='main-des-5' style = {{marginTop:"1rem"}}><b>The opportunity to upgrade your benefits ends on March 31st</b> so it's best to call and get your Flex Card locked in while it's still available.</div>
 					</div>
 					<div className='survey'>
 					<div className='quiz-5' id='btn'>{quiz}</div>

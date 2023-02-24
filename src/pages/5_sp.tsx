@@ -106,8 +106,6 @@ export default function Fifth_SP() {
 	const [step, setStep] = useState("process")
 	const [min, setMin] = useState(3)
 	const [second, setSecond] = useState<any>(0)    
-	// const [yes, setYes] = useState("Yes")
-	// const [no, setNo] = useState("No")
 	
 	
 	const stepProcess = () => {
@@ -157,33 +155,17 @@ export default function Fifth_SP() {
 			const startTime:any = new Date();
 			const timer = setInterval(()=> {
 			  const nowTime:any = new Date();
-			  // setMin(min+1)
 			  setSecond((180-Math.round((nowTime-startTime)/1000))%60)
 			  setMin(Math.floor((180-Math.round((nowTime-startTime)/1000))/60))
 			}, 1000)
-			// if(Math.round((new Date()-startTime)/1000)){
-			// 	console.log("dsfdsfdsf");
-			// 	return clearInterval(timer)
-			// }
 		}
 	}
-
-	// React.useEffect(() => {
-	//                 // getInfo()
-	//                 console.log(time);
-	//                 stepProcess()
-	//                 const timer = setTimeout(() => setTime(+new Date()), 1000)
-	//                 return () => clearTimeout(timer)
-	//         }, [time]);
-
 
 	useEffect(() => {
 		stepProcess()
 	}, [step])
 
 	const topScroll = (id: any) => {
-			// window.scrollTo(0, 0);
-			// window.innerWidth < 1200 ? setIsMobile(false) : scrollTo({ id });
 			scrollTo({ id });
 		}
 
@@ -191,13 +173,9 @@ export default function Fifth_SP() {
 		topScroll("btn");
 		if(quiz === "¿Vives en los Estados Unidos?"){
 			setQuiz("¿Eres menor de 85 años?")
-			// setYes("Yes, I OWN")
-			// setNo("No, I'm Renting")
 		}else{
             if(quiz === "¿Eres menor de 85 años?"){
                 setQuiz("¿Tiene una deuda no garantizada de $10k o más?")
-                // setYes("More than $100")
-                // setNo("Less than $100")
             }else{
                 setStep("Revisando sus respuestas...")
                 topScroll("top");
@@ -235,13 +213,9 @@ export default function Fifth_SP() {
 		topScroll("btn");
 		if(quiz === "¿Vives en los Estados Unidos?"){
 			setQuiz("¿Eres menor de 85 años?")
-			// setYes("Yes, I OWN")
-			// setNo("No, I'm Renting")
 		}else{
 			if(quiz === "¿Eres menor de 85 años?"){
                 setQuiz("¿Tiene una deuda no garantizada de $10k o más?")
-                // setYes("More than $100")
-                // setNo("Less than $100")
             }else{
                 setStep("Revisando sus respuestas...")
                 topScroll("top");
@@ -282,9 +256,7 @@ export default function Fifth_SP() {
 				<>
 					<div className='main-container-5'>
 						<div className='main-descrition-5'>
-						{/* <div className='main-des-title-smaller'><b>Finally, Big Relief for American Homeowners:</b></div> */}
 							<div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div>
-							{/* <img src = {Head_img} alt = "head" width = "100%" /> */}
 							<img className='topic-img-middle' src = {Head_bg} alt = "head"/>
 							<div className='main-des-5'>Los deudores están eliminando hasta el 100% de su deuda bajo este programa respaldado por abogados y USTED TAMBIÉN PUEDE.</div>
 							<div className='main-des-5' style = {{marginTop:"1rem"}}>La mejor parte es que, si califica después de responder las 3 preguntas a continuación, obtiene una llamada de consulta GRATUITA con un agente calificado de nuestro equipo que ha llevado el perdón financiero a más de 200,000 deudores en todo el país.</div>
