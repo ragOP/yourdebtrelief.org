@@ -11,7 +11,7 @@ import Head_bg from '../assets/hero8.png'
 // google tag manager
 
 const tagManagerArgs = {
-    gtmId: 'GTM-M8Z6CBV'
+    gtmId: 'GTM-K2P2NS7'
 }
 
 TagManager.initialize(tagManagerArgs)
