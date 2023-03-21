@@ -259,7 +259,7 @@ export default function Sixth_SP() {
 							<div className='main-des-title-6'><b>Biden's<span style={{backgroundColor:"#fde047"}}> 100% Debt Relief Package</span> for Americans with a Credit Card Debt of OVER $10,000. Here's How To Claim!</b></div>
 							<img className='topic-img-middle' src = {Head_bg} alt = "head"/>
 							<div className='main-des-5'>Americans with over $10,000 of Credit Card Debt Are Receiving A 100% Debt Relief Under This Biden-Approved National Debt Relief Program.</div>
-							<div className='main-des-5' style = {{marginTop:"1rem"}}>The opportunity to enroll under this program ends this weekend, so it's best to get your Relief Check without any delay.</div>
+							<div className='main-des-5' style = {{marginTop:"1rem"}}>The opportunity to enroll under this program ends this weekend, so it's best to <b>get your Relief Check without any delay.</b></div>
 							<div className='main-des-5' style = {{marginTop:"1rem"}}>Simply answer the questions below:</div>
 						</div>
 						<div className='survey'>
