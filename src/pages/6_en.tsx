@@ -175,7 +175,7 @@ export default function Sixth_SP() {
 			setQuiz("Are you under 85?")
 		}else{
             if(quiz === "Are you under 85?"){
-                setQuiz("Do you have unsecured debt of $10k or more?")
+                setQuiz("Do you have Credit Card Debt of $10k or more?")
             }else{
                 setStep("Reviewing Your Answers...")
                 topScroll("top");
@@ -215,7 +215,7 @@ export default function Sixth_SP() {
 			setQuiz("Are you under 85?")
 		}else{
 			if(quiz === "Are you under 85?"){
-                setQuiz("Do you have unsecured debt of $10k or more?")
+                setQuiz("Do you have Credit Card Debt of $10k or more?")
             }else{
                 setStep("Reviewing Your Answers...")
                 topScroll("top");
