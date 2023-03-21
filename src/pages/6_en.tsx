@@ -257,7 +257,7 @@ export default function Sixth_SP() {
 				<>
 					<div className='main-container-5'>
 						<div className='main-descrition-5'>
-							<img className='topic-img-middle' src = {Headline} alt = "head"/>
+							<img className='topic-img-larger' src = {Headline} alt = "head"/>
 							{/* <div className='main-des-title-6'><b>Biden's<span style={{backgroundColor:"#fde047"}}> 100% Debt Relief Package</span> for Americans with a Credit Card Debt of OVER $10,000. Here's How To Claim!</b></div> */}
 							<img className='topic-img-middle' src = {Head_bg} alt = "head"/>
 							<div className='main-des-5'>Americans with over $10,000 in dues are receiving a 100% Financial Forgiveness Under This Biden-Approved Program. The opportunity to enroll under this program ends this weekend, so it's best to <b>get your Relief Check without any delay.</b></div>
