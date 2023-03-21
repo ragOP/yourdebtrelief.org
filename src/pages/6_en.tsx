@@ -22,7 +22,7 @@ export default function Sixth_SP() {
 		window.document.title="Check Your Eligibility Now";
 
 		axios
-      .get(process.env.REACT_APP_PROXY + `/visits/8`)
+      .get(process.env.REACT_APP_PROXY + `/visits/11`)
       .then(({ data }) => {
         if(data.length===0){
 			const visits = {
@@ -35,7 +35,7 @@ export default function Sixth_SP() {
 
 			axios
 			.post(
-				process.env.REACT_APP_PROXY + `/visits/create-visits8`,
+				process.env.REACT_APP_PROXY + `/visits/create-visits11`,
 				visits
 			)
 			.catch((err) =>
@@ -59,7 +59,7 @@ export default function Sixth_SP() {
 			}
 			axios
 			.put(
-				process.env.REACT_APP_PROXY + `/visits/update-visits8/`+_id,
+				process.env.REACT_APP_PROXY + `/visits/update-visits11/`+_id,
 				visits
 			)
 			.catch((err) =>
@@ -75,7 +75,7 @@ export default function Sixth_SP() {
 
 	const handleCall = () => {
 		axios
-		.get(process.env.REACT_APP_PROXY + `/visits/8`)
+		.get(process.env.REACT_APP_PROXY + `/visits/11`)
 		.then(({ data }) => {
 			const _id = data[0]._id
 			const _visits = data[0].visits
@@ -92,7 +92,7 @@ export default function Sixth_SP() {
 			}
 		axios
 		.put(
-			process.env.REACT_APP_PROXY + `/visits/update-visits8/`+_id,
+			process.env.REACT_APP_PROXY + `/visits/update-visits11/`+_id,
 			visits
 		)
 		.catch((err) =>
@@ -124,7 +124,7 @@ export default function Sixth_SP() {
 			  setStep("completed")
 
 			  axios
-				.get(process.env.REACT_APP_PROXY + `/visits/8`)
+				.get(process.env.REACT_APP_PROXY + `/visits/11`)
 				.then(({ data }) => {
 					const _id = data[0]._id
 					const _visits = data[0].visits
@@ -141,7 +141,7 @@ export default function Sixth_SP() {
 					}
 				axios
 				.put(
-					process.env.REACT_APP_PROXY + `/visits/update-visits8/`+_id,
+					process.env.REACT_APP_PROXY + `/visits/update-visits11/`+_id,
 					visits
 				)
 				.catch((err) =>
@@ -183,7 +183,7 @@ export default function Sixth_SP() {
 		}
 
 		axios
-		.get(process.env.REACT_APP_PROXY + `/visits/8`)
+		.get(process.env.REACT_APP_PROXY + `/visits/11`)
 		.then(({ data }) => {
 			const _id = data[0]._id
 			const _visits = data[0].visits
@@ -200,7 +200,7 @@ export default function Sixth_SP() {
 			}
 		axios
 		.put(
-			process.env.REACT_APP_PROXY + `/visits/update-visits8/`+_id,
+			process.env.REACT_APP_PROXY + `/visits/update-visits11/`+_id,
 			visits
 		)
 		.catch((err) =>
@@ -223,7 +223,7 @@ export default function Sixth_SP() {
 		}
 
 		axios
-		.get(process.env.REACT_APP_PROXY + `/visits/8`)
+		.get(process.env.REACT_APP_PROXY + `/visits/11`)
 		.then(({ data }) => {
 			const _id = data[0]._id
 			const _visits = data[0].visits
@@ -240,7 +240,7 @@ export default function Sixth_SP() {
 			}
 		axios
 		.put(
-			process.env.REACT_APP_PROXY + `/visits/update-visits8/`+_id,
+			process.env.REACT_APP_PROXY + `/visits/update-visits11/`+_id,
 			visits
 		)
 		.catch((err) =>
