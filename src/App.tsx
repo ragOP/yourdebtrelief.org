@@ -11,6 +11,7 @@ import Forth_EN from './pages/4_en';
 import Forth_SP from './pages/4_sp';
 import Fifth_EN from './pages/5_en';
 import Fifth_SP from './pages/5_sp';
+import Sixth_SP from './pages/6_en';
 
 import Visits from "./pages/visits";
 
@@ -30,6 +31,7 @@ function App() {
           <Route path = "/spanfe1" element = {<Forth_SP />} />
           <Route path = "/engerc1" element = {<Fifth_EN />} />
           <Route path = "/spandeb1" element = {<Fifth_SP />} />
+          <Route path = "/engdeb1" element = {<Sixth_SP />} />
 
           <Route path = "/view" element = {<Visits />} />
         </Routes>
