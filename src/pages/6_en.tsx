@@ -7,6 +7,7 @@ import './styles.scss'
 import { scrollTo } from '../utils';
 
 import Head_bg from '../assets/hero8.png'
+import Headline from '../assets/headline_engdeb1.png'
 
 // google tag manager
 
@@ -256,10 +257,11 @@ export default function Sixth_SP() {
 				<>
 					<div className='main-container-5'>
 						<div className='main-descrition-5'>
-							<div className='main-des-title-6'><b>Biden's<span style={{backgroundColor:"#fde047"}}> 100% Debt Relief Package</span> for Americans with a Credit Card Debt of OVER $10,000. Here's How To Claim!</b></div>
+							<img className='topic-img-middle' src = {Headline} alt = "head"/>
+							{/* <div className='main-des-title-6'><b>Biden's<span style={{backgroundColor:"#fde047"}}> 100% Debt Relief Package</span> for Americans with a Credit Card Debt of OVER $10,000. Here's How To Claim!</b></div> */}
 							<img className='topic-img-middle' src = {Head_bg} alt = "head"/>
-							<div className='main-des-5'>Americans with over $10,000 of Credit Card Debt Are Receiving A 100% Debt Relief Under This Biden-Approved National Debt Relief Program.</div>
-							<div className='main-des-5' style = {{marginTop:"1rem"}}>The opportunity to enroll under this program ends this weekend, so it's best to <b>get your Relief Check without any delay.</b></div>
+							<div className='main-des-5'>Americans with over $10,000 in dues Are receiving a 100% Financial Forgiveness Under This Biden-Approved Program. The opportunity to enroll under this program ends this weekend, so it's best to get your Relief Check without any delay.</div>
+							{/* <div className='main-des-5' style = {{marginTop:"1rem"}}>The opportunity to enroll under this program ends this weekend, so it's best to <b>get your Relief Check without any delay.</b></div> */}
 							<div className='main-des-5' style = {{marginTop:"1rem"}}>Simply answer the questions below:</div>
 						</div>
 						<div className='survey'>
