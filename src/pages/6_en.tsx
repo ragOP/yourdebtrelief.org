@@ -258,7 +258,7 @@ export default function Sixth_SP() {
 						<div className='main-descrition-5'>
 							<div className='main-des-title-6'><b>Biden's<span style={{backgroundColor:"#fde047"}}> 100% Debt Relief Package</span> for Americans with a Credit Card Debt of OVER $10,000. Here's How To Claim!</b></div>
 							<img className='topic-img-middle' src = {Head_bg} alt = "head"/>
-							<div className='main-des-5'>Text below Image: Americans with over $10,000 of Credit Card Debt Are Receiving A 100% Debt Relief Under This Biden-Approved National Debt Relief Program.</div>
+							<div className='main-des-5'>Americans with over $10,000 of Credit Card Debt Are Receiving A 100% Debt Relief Under This Biden-Approved National Debt Relief Program.</div>
 							<div className='main-des-5' style = {{marginTop:"1rem"}}>The opportunity to enroll under this program ends this weekend, so it's best to get your Relief Check without any delay.</div>
 							<div className='main-des-5' style = {{marginTop:"1rem"}}>Simply answer the questions below:</div>
 						</div>
@@ -278,12 +278,12 @@ export default function Sixth_SP() {
 					</div>:
 					<div className='checking'>
 						<div className='congrats'>Congratulation, You Qualify!</div>
-						<div className='top-description-5'>Make A <b>Quick Call</b> and Speak to our Qualified Agent on how you can</div>
+						<div className='top-description-5'>Make A <b>Quick Call</b> and Speak to our Qualified Agent to claim your 100% Debt Relief Now!</div>
 						<div className='spots-count'>Spots remaining: 4</div>
 						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
-						<a href = "tel:+18662286310">
+						<a href = "tel:+18339820104">
 							<div className='call-btn' onClick={handleCall}>
-								CALL (866) 228-6310
+								CALL (833) 982-0104
 							</div>
 						</a>
 						<div className='sub-title'>We Have Reserved Your Spot</div>
