@@ -300,6 +300,7 @@ export default function Sixth_SP() {
 			}
 			<div className='footer'>
 				<div className='terms'>Terms & Conditions | Privacy Policy</div>
+				<div className='copyright'>This site is not a part of the Youtube website or Youtube Inc. Additionally, This site is NOT endorsed by Youtube in any way. YOUTUBE is a trademark of YOUTUBE, Inc.</div>
 				<div className='copyright'>Copyright © 2022 - All right reserved Daily America Savings.</div>
 			</div>
 		</div>
