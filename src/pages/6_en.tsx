@@ -103,7 +103,7 @@ export default function Sixth_SP() {
 	}
 
 
-	const [quiz, setQuiz] = useState("1.Do you live in the United States?")
+	const [quiz, setQuiz] = useState("1. Do you live in the United States?")
 	const [step, setStep] = useState("process")
 	const [min, setMin] = useState(3)
 	const [second, setSecond] = useState<any>(0)    
@@ -172,7 +172,7 @@ export default function Sixth_SP() {
 
 	const handleQuizP = () => {
 		topScroll("btn");
-		if(quiz === "1.Do you live in the United States?"){
+		if(quiz === "1. Do you live in the United States?"){
 			setQuiz("2. Are you under 85?")
 		}else{
             if(quiz === "2. Are you under 85?"){
@@ -212,7 +212,7 @@ export default function Sixth_SP() {
 
 	const handleQuizN = () => {
 		topScroll("btn");
-		if(quiz === "1.Do you live in the United States?"){
+		if(quiz === "1. Do you live in the United States?"){
 			setQuiz("2. Are you under 85?")
 		}else{
 			if(quiz === "2. Are you under 85?"){
