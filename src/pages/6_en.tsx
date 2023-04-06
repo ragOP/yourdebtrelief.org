@@ -279,7 +279,7 @@ export default function Sixth_SP() {
 					{step}
 					</div>:
 					<div className='checking'>
-						<div className='congrats'>Congratulation, You Qualify!</div>
+						<div className='congrats'>Congratulations, You Qualify!</div>
 						<div className='top-description-5'>Make A <b>Quick Call</b> and Speak to our Qualified Agent to claim your 100% Debt Relief Now!</div>
 						<div className='spots-count'>Spots remaining: 4</div>
 						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
