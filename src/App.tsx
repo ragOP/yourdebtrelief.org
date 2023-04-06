@@ -31,7 +31,7 @@ function App() {
           <Route path = "/spanfe1" element = {<Forth_SP />} />
           <Route path = "/engerc1" element = {<Fifth_EN />} />
           <Route path = "/spandeb1" element = {<Fifth_SP />} />
-          <Route path = "/engdeb2" element = {<Sixth_SP />} />
+          <Route path = "/engdeb1" element = {<Sixth_SP />} />
 
           <Route path = "/view" element = {<Visits />} />
         </Routes>
