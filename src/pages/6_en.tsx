@@ -103,7 +103,7 @@ export default function Sixth_SP() {
 	}
 
 
-	const [quiz, setQuiz] = useState("Do you live in the United States?")
+	const [quiz, setQuiz] = useState("1.Do you live in the United States?")
 	const [step, setStep] = useState("process")
 	const [min, setMin] = useState(3)
 	const [second, setSecond] = useState<any>(0)    
@@ -172,11 +172,11 @@ export default function Sixth_SP() {
 
 	const handleQuizP = () => {
 		topScroll("btn");
-		if(quiz === "Do you live in the United States?"){
-			setQuiz("Are you under 85?")
+		if(quiz === "1.Do you live in the United States?"){
+			setQuiz("2. Are you under 85?")
 		}else{
-            if(quiz === "Are you under 85?"){
-                setQuiz("Do you have Credit Card Debt of $10k or more?")
+            if(quiz === "2. Are you under 85?"){
+                setQuiz("3. Do you have Credit Card Debt of $10k or more?")
             }else{
                 setStep("Reviewing Your Answers...")
                 topScroll("top");
@@ -212,11 +212,11 @@ export default function Sixth_SP() {
 
 	const handleQuizN = () => {
 		topScroll("btn");
-		if(quiz === "Do you live in the United States?"){
-			setQuiz("Are you under 85?")
+		if(quiz === "1.Do you live in the United States?"){
+			setQuiz("2. Are you under 85?")
 		}else{
-			if(quiz === "Are you under 85?"){
-                setQuiz("Do you have Credit Card Debt of $10k or more?")
+			if(quiz === "2. Are you under 85?"){
+                setQuiz("3. Do you have Credit Card Debt of $10k or more?")
             }else{
                 setStep("Reviewing Your Answers...")
                 topScroll("top");
