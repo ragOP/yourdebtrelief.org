@@ -260,7 +260,7 @@ export default function Sixth_SP() {
 							<img className='topic-img-larger' src = {Headline} alt = "head"/>
 							<img className='topic-img-middle' src = {Head_bg} alt = "head"/>
 							<div className='main-des-5'>Americans with over $10,000 in dues are receiving upto 100% Financial Forgiveness Under This Emergency Relief Program.</div>
-							<div className='main-des-5' style = {{marginTop:"3rem"}}>The opportunity to enroll under this program ends tonight 7PM, so it's best to <b>check your eligibility without any delay.</b></div>
+							<div className='main-des-5' style = {{marginTop:"1rem"}}>The opportunity to enroll under this program ends tonight 7PM, so it's best to <b>check your eligibility without any delay.</b></div>
 							<div className='main-des-5' style = {{marginTop:"1rem"}}>Simply answer the questions below:</div>
 						</div>
 						<div className='survey'>
