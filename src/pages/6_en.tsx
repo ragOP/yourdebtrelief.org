@@ -252,7 +252,7 @@ export default function Sixth_SP() {
 
     return(
         <div>
-			<div className='top-sticky-blue' id='top'>National Relief Program</div>
+			<div className='top-sticky-blue' id='top'>Emergency Relief Program</div>
 			{step==="process"?
 				<>
 					<div className='main-container-5'>
