@@ -105,6 +105,7 @@ export default function Sixth_SP() {
 
 	const [quiz, setQuiz] = useState("1. Do you live in the United States?")
 	const [step, setStep] = useState("process")
+	const [result, setResult] = useState("1")
 	const [min, setMin] = useState(3)
 	const [second, setSecond] = useState<any>(0)    
 	
@@ -218,6 +219,7 @@ export default function Sixth_SP() {
 			if(quiz === "2. Are you under 85?"){
                 setQuiz("3. Do you have Credit Card Debt of $10k or more?")
             }else{
+				setResult("0")
                 setStep("Reviewing Your Answers...")
                 topScroll("top");
             }
@@ -277,24 +279,28 @@ export default function Sixth_SP() {
 					<div className='checking' style={{fontWeight:"700"}}>
 					{step}
 					</div>:
-					<div className='checking'>
-						<div className='congrats'>Congratulations, You Qualify!</div>
-						<div className='top-description-5'>Make A <b>Quick Call</b> and Speak to our Qualified Agent to claim your 100% Debt Relief Now!</div>
-						<div className='spots-count'>Spots remaining: 4</div>
-						<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
-						<a href = "tel:+18339820104">
-							<div className='call-btn' onClick={handleCall}>
-								CALL (833) 982-0104
+					(result === "1"?
+						<div className='checking'>
+							<div className='congrats'>Congratulations, You Qualify!</div>
+							<div className='top-description-5'>Make A <b>Quick Call</b> and Speak to our Qualified Agent to claim your 100% Debt Relief Now!</div>
+							<div className='spots-count'>Spots remaining: 4</div>
+							<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
+							<a href = "tel:+18339820104">
+								<div className='call-btn' onClick={handleCall}>
+									CALL (833) 982-0104
+								</div>
+							</a>
+							<div className='sub-title'>We Have Reserved Your Spot</div>
+							<div className='sub-description'>Due to high call volume, your official agent is waiting for only <b>3 minutes</b>, then your spot will not be reserved.</div>
+							<div className='timer'>
+								<div className='timer-cell'>{min}</div>
+								<div className='timer-cell'>:</div>
+								<div className='timer-cell'>{second}</div>
 							</div>
-						</a>
-						<div className='sub-title'>We Have Reserved Your Spot</div>
-						<div className='sub-description'>Due to high call volume, your official agent is waiting for only <b>3 minutes</b>, then your spot will not be reserved.</div>
-						<div className='timer'>
-							<div className='timer-cell'>{min}</div>
-							<div className='timer-cell'>:</div>
-							<div className='timer-cell'>{second}</div>
-						</div>
-					</div>
+						</div>:
+						<div className='checking'>
+							<div className='sub-title'>Sorry, you're not eligible.</div>
+						</div>)
 				)
 			}
 			<div className='footer'>
