@@ -7,6 +7,7 @@ import './styles.scss'
 import { scrollTo } from '../utils';
 
 import Head_bg from '../assets/hero8.png'
+import Headline from '../assets/headline_spandeb1.png'
 
 // google tag manager
 
@@ -256,11 +257,12 @@ export default function Fifth_SP() {
 				<>
 					<div className='main-container-5'>
 						<div className='main-descrition-5'>
-							<div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div>
+							{/* <div className='main-des-title-6'><b>Finalmente, los deudores están obteniendo hasta un<span style={{backgroundColor:"#fde047"}}> 100% de perdón financiero</span> bajo este programa respaldado por abogados, ¡Aquí está cómo!</b></div> */}
+							<img className='topic-img-larger' src = {Headline} alt = "head"/>
 							<img className='topic-img-middle' src = {Head_bg} alt = "head"/>
-							<div className='main-des-5'>Los deudores están eliminando hasta el 100% de su deuda bajo este programa respaldado por abogados y USTED TAMBIÉN PUEDE.</div>
-							<div className='main-des-5' style = {{marginTop:"1rem"}}>La mejor parte es que, si califica después de responder las 3 preguntas a continuación, obtiene una llamada de consulta GRATUITA con un agente calificado de nuestro equipo que ha llevado el perdón financiero a más de 200,000 deudores en todo el país.</div>
-							<div className='main-des-5' style = {{marginTop:"1rem"}}>La oportunidad de reclamar una consulta 100% GRATUITA finaliza el 10 de febrero, por lo que es mejor verificar su elegibilidad y hacer su llamada gratuita mientras aún puede:?</div>
+							<div className='main-des-5'>Los estadounidenses con más de $10,000 en cuotas reciben hasta un <b>100% de condonación financiera en virtud de este programa de ayuda de emergencia.</b></div>
+							<div className='main-des-5' style = {{marginTop:"1rem"}}>La oportunidad de inscribirse en este programa finaliza esta noche a las 7:00 p.m., <b>por lo que es mejor verificar su elegibilidad sin demora.</b></div>
+							<div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div>
 						</div>
 						<div className='survey'>
 							<div className='quiz-5' id='btn'>{quiz}</div>
