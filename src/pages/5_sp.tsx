@@ -283,9 +283,9 @@ export default function Fifth_SP() {
 						<div className='top-description-5'>¡Haga una llamada rápida para reclamar sus paneles solares gratis ahora!</div>
 						<div className='spots-count'>Lugares restantes: 4</div>
 						<div className='tap-direction'>👇TOCA ABAJO PARA LLAMAR👇</div>
-						<a href = "tel:+18888630376">
+						<a href = "tel:+18449233818">
 							<div className='call-btn' onClick={handleCall}>
-								CALL (888) 863-0376
+								CALL (844) 923-3818
 							</div>
 						</a>
 						<div className='sub-title'>Nosotras hemos reservado tu lugar</div>
