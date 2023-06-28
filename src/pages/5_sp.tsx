@@ -103,7 +103,7 @@ export default function Fifth_SP() {
 	}
 
 
-	const [quiz, setQuiz] = useState("¿Vives en los Estados Unidos?")
+	const [quiz, setQuiz] = useState("1. ¿Eres mayor de 18 años?")
 	const [step, setStep] = useState("process")
 	const [min, setMin] = useState(3)
 	const [second, setSecond] = useState<any>(0)    
@@ -172,15 +172,11 @@ export default function Fifth_SP() {
 
 	const handleQuizP = () => {
 		topScroll("btn");
-		if(quiz === "¿Vives en los Estados Unidos?"){
-			setQuiz("¿Eres menor de 85 años?")
+		if(quiz === "1. ¿Eres mayor de 18 años?"){
+			setQuiz("2. ¿Tiene una deuda no garantizada de $10k o más?")
 		}else{
-            if(quiz === "¿Eres menor de 85 años?"){
-                setQuiz("¿Tiene una deuda no garantizada de $10k o más?")
-            }else{
-                setStep("Revisando sus respuestas...")
-                topScroll("top");
-            }
+			setStep("Revisando sus respuestas...")
+			topScroll("top");
 		}
 
 		axios
@@ -212,15 +208,11 @@ export default function Fifth_SP() {
 
 	const handleQuizN = () => {
 		topScroll("btn");
-		if(quiz === "¿Vives en los Estados Unidos?"){
-			setQuiz("¿Eres menor de 85 años?")
+		if(quiz === "1. ¿Eres mayor de 18 años?"){
+			setQuiz("2. ¿Tiene una deuda no garantizada de $10k o más?")
 		}else{
-			if(quiz === "¿Eres menor de 85 años?"){
-                setQuiz("¿Tiene una deuda no garantizada de $10k o más?")
-            }else{
-                setStep("Revisando sus respuestas...")
-                topScroll("top");
-            }
+			setStep("Revisando sus respuestas...")
+			topScroll("top");
 		}
 
 		axios
@@ -261,7 +253,7 @@ export default function Fifth_SP() {
 							<img className='topic-img-larger' src = {Headline} alt = "head"/>
 							<img className='topic-img-middle' src = {Head_bg} alt = "head"/>
 							<div className='main-des-5'>Los estadounidenses con más de $10,000 en cuotas obtienen hasta un 100 % de condonación financiera bajo este programa de ayuda de emergencia.</div>
-							<div className='main-des-5' style = {{marginTop:"1rem"}}><b>La oportunidad de inscribirse en este programa finaliza esta noche a las 7:00 p. m.</b>, por lo que es mejor verificar su elegibilidad sin demora.</div>
+							<div className='main-des-5' style = {{marginTop:"1rem"}}><b>La oportunidad de inscribirse en este programa finaliza esta noche a las 7:00 P. M.</b>, por lo que es mejor verificar su elegibilidad sin demora.</div>
 							{/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
 						</div>
 						<div className='survey'>
@@ -280,7 +272,7 @@ export default function Fifth_SP() {
 					</div>:
 					<div className='checking'>
 						<div className='congrats'>¡Felicitaciones, USTED CALIFICA!</div>
-						<div className='top-description-5'>¡Haga una llamada rápida para reclamar sus paneles solares gratis ahora!</div>
+						<div className='top-description-5'>¡Haga una llamada rápida para reclamar su alivio de deuda de hasta el 100 % ahora!</div>
 						<div className='spots-count'>Lugares restantes: 4</div>
 						<div className='tap-direction'>👇TOCA ABAJO PARA LLAMAR👇</div>
 						<a href = "tel:+18553050321">
