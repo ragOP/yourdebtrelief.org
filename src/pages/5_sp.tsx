@@ -244,7 +244,7 @@ export default function Fifth_SP() {
 
     return(
         <div>
-			<div className='top-sticky-blue' id='top'>Emergency Relief Programs</div>
+			<div className='top-sticky-blue' id='top'>Emergency Relief Program</div>
 			{step==="process"?
 				<>
 					<div className='main-container-5'>
