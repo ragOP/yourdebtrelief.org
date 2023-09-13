@@ -275,9 +275,9 @@ export default function Fifth_SP() {
 						<div className='top-description-5'>¡Haga una llamada rápida para reclamar su alivio de deuda de hasta el 100 % ahora!</div>
 						<div className='spots-count'>Lugares restantes: 4</div>
 						<div className='tap-direction'>👇TOCA ABAJO PARA LLAMAR👇</div>
-						<a href = "tel:+188821783091">
+						<a href = "tel:+18882178309">
 							<div className='call-btn' onClick={handleCall}>
-								CALL (888) 217-83091
+								CALL (888) 217-8309
 							</div>
 						</a>
 						<div className='sub-title'>Nosotras hemos reservado tu lugar</div>
