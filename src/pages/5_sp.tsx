@@ -244,7 +244,7 @@ export default function Fifth_SP() {
 
     return(
         <div>
-			<div className='top-sticky-blue' id='top'>1Emergency Relief Program</div>
+			<div className='top-sticky-blue' id='top'>Emergency Relief Program</div>
 			{step==="process"?
 				<>
 					<div className='main-container-5'>
@@ -275,9 +275,9 @@ export default function Fifth_SP() {
 						<div className='top-description-5'>¡Haga una llamada rápida para reclamar su alivio de deuda de hasta el 100 % ahora!</div>
 						<div className='spots-count'>Lugares restantes: 4</div>
 						<div className='tap-direction'>👇TOCA ABAJO PARA LLAMAR👇</div>
-						<a href = "tel:+18882178309">
+						<a href = "tel:+18553050321">
 							<div className='call-btn' onClick={handleCall}>
-								CALL (888) 217-8309
+							CALL (855) 305-0321
 							</div>
 						</a>
 						<div className='sub-title'>Nosotras hemos reservado tu lugar</div>
