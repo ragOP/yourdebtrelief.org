@@ -7,7 +7,7 @@ import './styles.scss'
 import { scrollTo } from '../utils';
 
 import Head_bg from '../assets/hero8.png'
-import Headline from '../assets/headline_engdeb1.png'
+import Headline from '../assets/ok.png'
 
 // google tag manager
 
@@ -261,7 +261,7 @@ export default function Sixth_SP() {
 						<div className='main-descrition-5'>
 							<img className='topic-img-larger' src = {Headline} alt = "head"/>
 							<img className='topic-img-middle' src = {Head_bg} alt = "head"/>
-							<div className='main-des-5'>Americans with over $22210,000 in dues are receiving upto 100% Financial Forgiveness Under This Emergency Relief Program.</div>
+							<div className='main-des-5'>Americans with over $10,000 in dues are receiving upto 80% Financial Forgiveness Under This Emergency Relief Program.</div>
 							<div className='main-des-5' style = {{marginTop:"1rem"}}>The opportunity to enroll under this program ends tonight 7PM, so it's best to <b>check your eligibility without any delay.</b></div>
 							<div className='main-des-5' style = {{marginTop:"1rem"}}>Simply answer the questions below:</div>
 						</div>
@@ -282,7 +282,7 @@ export default function Sixth_SP() {
 					(result === "1"?
 						<div className='checking'>
 							<div className='congrats'>Congratulations, You Qualify!</div>
-							<div className='top-description-5'>Make A <b>Quick Call</b> and Speak to our Qualified Agent to claim your 100% Debt Relief Now!</div>
+							<div className='top-description-5'>Make A <b>Quick Call</b> and Speak to our Qualified Agent to claim your 80% Debt Relief Now!</div>
 							<div className='spots-count'>Spots remaining: 4</div>
 							<div className='tap-direction'>👇 TAP BELOW TO CALL 👇</div>
 							<a href = "tel:+18339820104">
