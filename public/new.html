@@ -1,0 +1,733 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subsidy Expiring Soon</title>
+  <link rel="icon" href="images/favicon.png">
+
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <script async="" src="js/gtm.js"></script><script async="" src="js/fbevents.js"></script><script src="js/swiper-bundle.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&amp;display=swap" rel="stylesheet">
+
+  <meta name="robots" content="noindex">
+
+
+  <script>
+    var phoneNumberButtonConversion = false;
+    function callButtonClicked() {
+      if (phoneNumberButtonConversion) {
+        return;
+      }
+      console.log("call-button clicked");
+      phoneNumberButtonConversion = true;
+      fbq('track', 'Lead');
+    }
+  </script>
+
+  <style>
+    body,
+    html {
+      min-height: 100%;
+      margin: 0;
+      background-color: #004b75;
+      font-family: "Roboto", sans-serif;
+      overflow-x: hidden;
+    }
+
+    .form-wrapper {
+      background-color: white;
+      min-height: 63vh;
+      border-radius: 5px;
+      max-width: 100vw;
+      box-sizing: border-box;
+      /* Added this line */
+      padding-bottom: 10vh;
+    }
+
+    /* BUTTONS */
+    .button-positive {
+      background-color: #004b75;
+      color: white;
+      border-radius: 5px;
+      padding: 18px;
+      text-align: center;
+      font-weight: medium;
+      font-size: 29px;
+      cursor: pointer;
+    }
+
+    .button-positive:hover {
+      background-color: #003452;
+    }
+
+    /** Button positive large **/
+    .button-positive-large {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 40px 30px;
+      background-color: #004b75;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .button-positive-large:hover {
+      background-color: #003452;
+    }
+
+    .button-positive-large div:first-child {
+      font-size: 33px;
+      margin-right: 10px;
+    }
+
+    .button-positive-large div:last-child {
+      font-size: 30px;
+      font-weight: bold;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    /** Button positive call **/
+    .button-positive-call {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 23px 30px;
+      background-color: #004b75;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .button-positive-call:hover {
+      background-color: #003452;
+    }
+
+    .button-positive-call div:first-child {
+      font-size: 30px;
+      margin-right: 10px;
+    }
+
+    .button-positive-call div:last-child {
+      font-size: 23px;
+      font-weight: bold;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    /** Button negative **/
+    .button-negative {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 30px;
+      background-color: #fff;
+      border: 2px solid #004b75;
+      color: #004b75;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .button-negative:hover {
+      background-color: #003452;
+      color: white;
+    }
+
+    .button-negative div:first-child {
+      font-size: 33px;
+      margin-right: 10px;
+    }
+
+    .button-negative div:last-child {
+      font-size: 30px;
+      font-weight: bold;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    /** other styles **/
+    .min-full-height {
+      min-height: 89vh;
+    }
+
+    .content {
+      background-image: url("images/bg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-align: center;
+      font-size: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .title {
+      margin-bottom: 15px;
+      font-size: 30px;
+      font-weight: 900;
+      text-align: center;
+      color: white;
+      -webkit-text-stroke-width: 1.5px;
+      -webkit-text-stroke-color: black;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .breaking-and-live {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .persistent-header {
+      padding: 20px 20px 0px;
+    }
+
+    .swiper-padding {
+      padding: 10px;
+    }
+
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slide-content {
+      width: calc(100% - 20px);
+      /* subtracting 20px padding from each side */
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .count {
+      font-size: 15px;
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+
+    .question {
+      font-size: 26px;
+      font-weight: bold;
+      margin-top: 0px;
+      margin-bottom: 35px;
+      list-style: 28px;
+    }
+
+    .explainer {
+      font-size: 23px;
+    }
+
+    @keyframes throb {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .throbbing {
+      display: inline-block;
+      color: red;
+      animation: throb 1.5s infinite;
+    }
+
+    /** Desktop styling for slider **/
+    @media (min-width: 600px) {
+      .title {
+        padding-bottom: 150px;
+      }
+
+      .swiper-container {
+        height: 500px;
+      }
+
+      .swiper-slide {
+        height: 100%;
+      }
+
+      .swiper-padding {
+        padding: 0px;
+      }
+
+      .swiper-slide {
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .swiper-slide-active {
+        visibility: visible;
+      }
+
+      .slide-content {
+        width: calc(100% - 30px);
+        /* subtracting 20px padding from each side */
+        padding: 15px;
+        box-sizing: border-box;
+      }
+
+      .count {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .question {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .explainer {
+        font-size: 30px;
+      }
+    }
+  </style>
+
+  <script>
+    let form_answers = {
+      earns_less_than_50k_per_year: "",
+      has_medicaid_or_medicare: "",
+      age_range: "",
+      angle: "subsidy",
+    };
+    function addTagsToRingba(tags_to_add) {
+      for (const [key, value] of Object.entries(tags_to_add)) {
+        (window._rgba_tags = window._rgba_tags || []).push({ [key]: value });
+      }
+    }
+  </script>
+
+  <script>
+    const url_weight = Math.floor(Math.random() * 10) + 1; // Assign a random value from 1 to 10
+
+    function addDataToURL(data) {
+      // Ensure url_weight is included in the data object
+      data['weight'] = url_weight;
+
+      // Check if URL has query parameters
+      let url = new URL(window.location.href);
+      let searchParams = new URLSearchParams(window.location.search);
+
+      // Append new key-value pairs to the URL with 'url_' prepended to each key
+      for (let key in data) {
+        if (data.hasOwnProperty(key)) {
+          searchParams.set('url_' + key, data[key]);
+        }
+      }
+
+      // Use history API to update the URL without refreshing the page
+      window.history.replaceState({}, '', url.pathname + '?' + searchParams.toString());
+    }
+  </script>
+          <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WCW4ZF79');</script>
+        <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+    
+                <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCW4ZF79"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+  <!-- Min 100vh -->
+  <div class="min-full-height content">
+    <div class="persistent-header">
+      <div class="breaking-and-live">
+        <div>
+          <img style="height: 36px" src="images/breaking-news.png" alt="Breaking news">
+        </div>
+        <div>
+          <img style="height: 18px" src="images/live.gif" alt="Live">
+        </div>
+      </div>
+
+      <div class="title">
+        El Congreso Anuncia Subsidio de $6,400 Disponible para Todos los Estadounidenses.
+      </div>
+    </div>
+
+    <!-- Form Area-->
+
+    <div class="form">
+      <div class="swiper-padding">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Page 1-->
+            <div class="swiper-slide">
+              <div class="form-wrapper slide-content" id="page-1">
+                <div class="question" style="margin-bottom: 10px">
+                  Cubre tus gastos médicos, alquiler, facturas y comestibles hoy. Reclama lo que legítimamente te corresponde.
+                </div>
+                <div style="margin-bottom: 16px">Haz Clic Abajo Para Reclamar.</div>
+
+                <div class="button-positive-large next-button" style="margin-bottom: 20px">
+                  <div>Reclama Ahora</div>
+                </div>
+
+                <div style="
+                      position: absolute;
+                      width: 65px;
+                      right: 0;
+                      margin-top: -86px;
+                      margin-right: 26px;
+                    " class="next-button">
+                  <img style="width: 100%" src="images/tap.gif">
+                </div>
+
+                <div>
+                  <img src="images/check-8400.jpg" style="width: 100%">
+                </div>
+              </div>
+            </div>
+
+            <!-- Page 2-->
+            <div class="swiper-slide">
+              <div class="form-wrapper slide-content" id="page-2">
+                <div class="count">1 of 3</div>
+                <div class="question">
+                  ¿Ganas menos de $50,000 al año?
+                </div>
+
+                <div class="button-positive-large next-button" style="margin-bottom: 20px" onclick="form_answers.earns_less_than_50k_per_year = 'yes';">
+                  <!-- Check Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4.5" stroke="currentColor" class="w-6 h-6" width="33px" height="33px">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                  </svg>
+                  <!-- / Check Icon -->
+
+                  <div>Sí</div>
+                </div>
+
+                <div style="
+                      position: absolute;
+                      width: 65px;
+                      right: 0;
+                      margin-top: -86px;
+                      margin-right: 26px;
+                    " class="next-button" onclick="form_answers.earns_less_than_50k_per_year = 'yes';">
+                  <img style="width: 100%" src="images/tap.gif">
+                </div>
+
+                <div class="button-negative next-button" style="margin-bottom: 20px" onclick="form_answers.earns_less_than_50k_per_year = 'no';">
+                  <!-- X Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4.5" stroke="currentColor" class="w-6 h-6" width="33px" height="33px">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                  <!-- / X Icon -->
+
+                  <div>No</div>
+                </div>
+
+                <div class="explainer">
+                  Debes ganar menos de $50,000 al año para calificar.
+                </div>
+              </div>
+            </div>
+
+            <!-- Page 3-->
+            <div class="swiper-slide">
+              <div class="form-wrapper slide-content" id="page-3">
+                <div class="count">2 of 3</div>
+                <div class="question">¿Estás en Medicare o Medicaid?</div>
+
+                <div class="button-positive-large next-button" style="margin-bottom: 20px" onclick="form_answers.has_medicaid_or_medicare = 'no';">
+                  <!-- Check Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4.5" stroke="currentColor" class="w-6 h-6" width="33px" height="33px">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                  </svg>
+                  <!-- / Check Icon -->
+                  <div>No</div>
+                </div>
+
+                <div style="
+                      position: absolute;
+                      width: 65px;
+                      right: 0;
+                      margin-top: -86px;
+                      margin-right: 26px;
+                    " class="next-button" onclick="form_answers.has_medicaid_or_medicare = 'no';">
+                  <img style="width: 100%" src="images/tap.gif">
+                </div>
+
+                <div class="button-negative next-button" style="margin-bottom: 20px" onclick="form_answers.has_medicaid_or_medicare = 'yes';">
+                  <!-- X Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4.5" stroke="currentColor" class="w-6 h-6" width="33px" height="33px">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                  <!-- / X Icon -->
+                  <div>Sí</div>
+                </div>
+
+                <div class="explainer">
+                  Para calificar, no debes estar en Medicare o Medicaid.
+                </div>
+              </div>
+            </div>
+
+            <!-- Page 4-->
+            <div class="swiper-slide">
+              <div class="form-wrapper slide-content" id="page-4">
+                <div class="count">¡Última pregunta!</div>
+                <div class="question" style="margin-bottom: 67px">
+                  ¿Cuántos años tienes?
+                </div>
+
+                <div class="button-positive-large next-button" style="margin-bottom: 20px" onclick="form_answers.age_range = '18-to-64';">
+                  <!-- Check Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4.5" stroke="currentColor" class="w-6 h-6" width="33px" height="33px">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                  </svg>
+                  <!-- / Check Icon -->
+                  <div>De 18 a 64 años.</div>
+                </div>
+
+                <div style="
+                      position: absolute;
+                      width: 65px;
+                      right: 0;
+                      margin-top: -86px;
+                      margin-right: 26px;
+                    " class="next-button" onclick="form_answers.age_range = '18-to-64';">
+                  <img style="width: 100%" src="images/tap.gif">
+                </div>
+
+                <div class="button-negative next-button" style="margin-bottom: 20px" onclick="form_answers.age_range = 'over-65';">
+                  <!-- X Icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4.5" stroke="currentColor" class="w-6 h-6" width="33px" height="33px">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                  <!-- / X Icon -->
+                  <div>Más de 65 años</div>
+                </div>
+
+                <div class="explainer">
+                  Debes tener entre 18 y 64 años para calificar.
+                </div>
+              </div>
+            </div>
+
+            <!-- Page 5 (Last page)-->
+            <div class="swiper-slide">
+              <div class="form-wrapper slide-content" id="page-5">
+                <div style="width: 100%">
+                  <img style="width: 100%" src="images/congrats.png" alt="Congratulations!">
+                </div>
+                <div style="font-size: 22px; padding: 19px 4px">
+                  ¡Preclasificas! Llama de inmediato para reclamar tu
+                  <strong style="text-decoration: underline">$6,400</strong>
+                  Subsidy &amp; <strong>$0</strong> Plan de Salud.
+                </div>
+
+                <!-- C2C Button-->
+                <a href="tel:+18557330447" style="text-decoration: none" onclick="callButtonClicked()">
+                  <div class="button-positive-call" style="margin-bottom: 20px">
+                    <div>
+                      <img style="width: 29px" src="images/phone.png">
+                    </div>
+                    <div>Haz Clic para Llamar Ahora</div>
+                  </div>
+                </a>
+
+                <a href="tel:+18557330447" style="text-decoration: none" onclick="callButtonClicked()">
+                  <div style="
+                        position: absolute;
+                        width: 65px;
+                        right: 0;
+                        margin-top: -68px;
+                        margin-right: 14px;
+                      " class="next-button">
+                    <img style="width: 100%" src="images/tap.gif">
+                  </div>
+                </a>
+
+                <div style="margin-bottom: 20px">
+                  <a href="tel:+18557330447" style="color: red" onclick="callButtonClicked()">
+                    Llama Ahora: (855) 733-0447
+                  </a>
+                </div>
+
+                <!-- congrats page footer content-->
+                <div style="font-size: 17px">
+                  Tiempo de Espera en Vivo:
+                  <strong class="throbbing" style="color: green">0</strong>
+                  minutes
+                  <br><br>
+                  Agentes Disponibles: <strong class="throbbing">4</strong>
+                </div>
+                <div style="width: 100%; margin-top: 20px">
+                  <img style="width: 65%" src="images/whitehouse.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- / Form Area -->
+  </div>
+  <!-- / Min 100vh -->
+
+  <!-- Footer -->
+  <div style="margin-top: -2px">
+    <div style="max-width: 600px; background-color: #ff0000; margin: 0 auto">
+      <div style="padding: 0px; text-align: center">
+        <div class="footer">
+          <div class="disclaimer" style="font-size: 13px; padding: 15px 20px 0px">
+         
+            <br>
+        
+          </div>
+          <br>
+          <div>
+            <a href="https://reliefconnection.com/privacy.php" style="color: #470000">Privacy Policy</a>
+            |
+            <a href="https://reliefconnection.com/terms.php" style="color: #470000">Terms of Service</a>
+            |
+            <a href="https://reliefconnection.com/contact.php" style="color: #470000">Contact Us</a>
+          </div>
+          <br>
+          <div style="text-align: center; font-size: 15px">
+            Copyright 2023 reliefconnection.com by Consumers Advocate Group LLC
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- / Footer-->
+
+  <script>
+    var ringbaInjected = false;
+    function injectRingba() {
+      console.log("Injecting Ringba...");
+      // Create a new script element
+      var script = document.createElement("script");
+
+      // Set the src attribute of the script
+      script.src = "//b-js.ringba.com/CA1bdf0cff8b9b4045956d6b42cf092ff2";
+
+      // Set the async attribute to ensure the script loads asynchronously
+      script.async = true;
+
+      // Append the script to the head of the document
+      document.head.appendChild(script);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var swiper = new Swiper(".swiper-container", {
+        direction: "horizontal",
+        loop: false,
+        allowSlideNext: false,
+        allowSlidePrev: false,
+      });
+
+      function addNextButtonListener(pageSelector) {
+        var buttons = document.querySelectorAll(
+          pageSelector + " .next-button"
+        );
+        buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            swiper.allowSlideNext = true;
+            swiper.slideNext();
+            swiper.allowSlideNext = false;
+          });
+        });
+      }
+
+      // Add event listeners for each page
+      addNextButtonListener("#page-1");
+      addNextButtonListener("#page-2");
+      addNextButtonListener("#page-3");
+      addNextButtonListener("#page-4");
+
+      // Helper function to stop all audios
+      function stopAllAudio() {
+        audio1.pause();
+        audio1.currentTime = 0;
+        audio2.pause();
+        audio2.currentTime = 0;
+        audio3.pause();
+        audio3.currentTime = 0;
+        audio4.pause();
+        audio4.currentTime = 0;
+      }
+
+      // Special behavior for page 1: play audio
+      var audio1 = new Audio("first.mp3");
+      var page1buttons = document.querySelectorAll("#page-1 .next-button");
+      page1buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          stopAllAudio();
+          audio1.play();
+        });
+      });
+
+      // Special behavior for page 2: play audio
+      var audio2 = new Audio("sec.mp3");
+      var page2buttons = document.querySelectorAll("#page-2 .next-button");
+      page2buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          stopAllAudio();
+          audio2.play();
+        });
+      });
+
+      // Special behavior for page 3: play audio
+      var audio3 = new Audio("last.mp3");
+      var page3buttons = document.querySelectorAll("#page-3 .next-button");
+      page3buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          stopAllAudio();
+          audio3.play();
+          addDataToURL(form_answers);
+
+          if (!ringbaInjected) {
+            ringbaInjected = true;
+            injectRingba();
+          }
+        });
+      });
+
+      // Special behavior for page 4: play audio
+      var audio4 = new Audio("audio-4.mp3");
+      var page4buttons = document.querySelectorAll("#page-4 .next-button");
+      page4buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          addDataToURL(form_answers);
+          gtag_report_conversion();
+          addTagsToRingba(form_answers);
+          stopAllAudio();
+          audio4.play();
+        });
+      });
+    });
+  </script>
+
+
+</body></html>

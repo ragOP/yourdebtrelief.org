@@ -13,7 +13,7 @@ import Forth_SP from './pages/4_sp';
 import Fifth_EN from './pages/5_en';
 import Fifth_SP from './pages/5_sp';
 import Sixth_SP from './pages/6_en';
-
+import Test from './pages/Test';
 import Visits from "./pages/visits";
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
         <Routes>
           {/* c */}
           <Route path = "/engaca1" element = {<First_EN />} />
+          <Route path = "/uzz" element = {<Test />} />
           <Route path = "/spanaca1" element = {<First_SP />} />
           <Route path = "/engaca2" element = {<Second_EN />} />
           <Route path = "/spanaca2" element = {<Second_SP />} />
