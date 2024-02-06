@@ -24,7 +24,7 @@ function App() {
         <Routes>
           {/* c */}
           <Route path = "/engaca1" element = {<First_EN />} />
-          <Route path = "/uzz" element = {<Test />} />
+          <Route path = "/acaspan28" element = {<Test />} />
           <Route path = "/spanaca1" element = {<First_SP />} />
           <Route path = "/engaca2" element = {<Second_EN />} />
           <Route path = "/spanaca2" element = {<Second_SP />} />
