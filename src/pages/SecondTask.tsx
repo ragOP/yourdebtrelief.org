@@ -260,8 +260,8 @@ export default function Fifth_SP() {
 						<div className='survey'>
 							<div className='quiz-5' id='btn'>{quiz}</div>
 							<div className='answer'>
-								<div className='answer-btn-5' onClick={handleQuizP}>Sí</div>
-								<div className='answer-btn-5' onClick={handleQuizN}>No</div>
+								<div className='answer-btn-5-1' onClick={handleQuizP}>Sí</div>
+								<div className='answer-btn-5-1' onClick={handleQuizN}>No</div>
 							</div>
 						</div>
 					</div>

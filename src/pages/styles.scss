@@ -225,6 +225,31 @@ a{
   .answer-btn-5:hover{
     background-color: rgb(62, 233, 124);
   }
+
+  .answer-btn-5-1{
+    color: white;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.55rem;
+    padding: 0.75rem;
+    background-color: rgb(34 197 94);
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .answer-btn-1:hover{
+    background-color: rgb(34, 155, 78);
+  }
+
+  .answer-btn-5-1:hover{
+    background-color: rgb(62, 233, 124);
+  }
   
   .footer{
     row-gap: 1rem;
