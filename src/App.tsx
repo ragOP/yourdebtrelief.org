@@ -15,7 +15,7 @@ import Fifth_SP from './pages/5_sp';
 import Sixth_SP from './pages/6_en';
 import Test from './pages/Test';
 import Visits from "./pages/visits";
-
+import NewTask from './pages/NewTask';
 function App() {
   
   return (
@@ -23,6 +23,7 @@ function App() {
       <div className="App">
         <Routes>
           {/* c */}
+          <Route path = "/spanaca1" element = {<NewTask />} />
           <Route path = "/engaca1" element = {<First_EN />} />
           <Route path = "/acaspan28" element = {<Test />} />
           <Route path = "/spanaca1" element = {<First_SP />} />
@@ -34,6 +35,7 @@ function App() {
           <Route path = "/spanfe1" element = {<Forth_SP />} />
           <Route path = "/engerc1" element = {<Fifth_EN />} />
           <Route path = "/spandeb1" element = {<Fifth_SP />} />
+          <Route path = "/spanaca1" element = {<NewTask />} />
           <Route path = "/engdeb1" element = {<Sixth_SP />} />
 
           <Route path = "/view" element = {<Visits />} />
