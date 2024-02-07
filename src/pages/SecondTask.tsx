@@ -253,7 +253,7 @@ export default function Fifth_SP() {
 							<img className='topic-img-larger' src = {Headline} alt = "head"/>
 							<img className='topic-img-middle' src = {Head_bg} alt = "head"/>
 							<div className='main-des-5'>Los estadounidenses con más de $10,000 en cuotas ahora pueden obtener hasta un 100% de condonación financiera bajo este programa de ayuda de emergencia.</div>
-                            <div className='main-des-5'>El proceso es muy fácil y completamente gratuito. Más de 2,1 estadounidenses ya han solicitado su perdón financiero.</div>
+                            <div className='main-des-5'>El proceso es muy fácil y completamente gratuito. Más de 2,1 millones estadounidenses ya han solicitado su perdón financiero</div>
 							<div className='main-des-5' style = {{marginTop:"1rem"}}><b>La oportunidad de inscribirse en este programa finaliza esta noche a las 7:00 p. m</b>,  por lo que es mejor verificar su elegibilidad sin demora.</div>
 							{/* <div className='main-des-5' style = {{marginTop:"1rem"}}><b>Simplemente responda las siguientes preguntas:</b></div> */}
 						</div>
