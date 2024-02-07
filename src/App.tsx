@@ -16,6 +16,7 @@ import Sixth_SP from './pages/6_en';
 import Test from './pages/Test';
 import Visits from "./pages/visits";
 import NewTask from './pages/NewTask';
+import SecondTask from './pages/SecondTask'
 function App() {
   
   return (
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           {/* c */}
           <Route path = "/spanaca1" element = {<NewTask />} />
+          <Route path = "/spandeb2" element = {<SecondTask />} />
           <Route path = "/engaca1" element = {<First_EN />} />
           <Route path = "/acaspan28" element = {<Test />} />
           <Route path = "/spanaca1" element = {<First_SP />} />
