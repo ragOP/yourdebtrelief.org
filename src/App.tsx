@@ -13,7 +13,7 @@ import Forth_SP from './pages/4_sp';
 import Fifth_EN from './pages/5_en';
 import Fifth_SP from './pages/5_sp';
 import Sixth_SP from './pages/6_en';
-import Test from './pages/Test';
+
 import Visits from "./pages/visits";
 
 function App() {
