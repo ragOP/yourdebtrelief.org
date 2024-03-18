@@ -275,9 +275,9 @@ export default function Fifth_SP() {
 						<div className='top-description-5'>¡Haga una llamada rápida para reclamar su alivio de deuda de hasta el 100 % ahora!</div>
 						<div className='spots-count'>Lugares restantes: 4</div>
 						<div className='tap-direction'>👇TOCA ABAJO PARA LLAMAR👇</div>
-						<a href = "tel:+18553050321">
+						<a href = "tel:+18335141750">
 							<div className='call-btn' onClick={handleCall}>
-							CALL (855) 305-0321
+							CALL (833) 514-1750
 							</div>
 						</a>
 						<div className='sub-title'>Nosotras hemos reservado tu lugar</div>
@@ -292,7 +292,7 @@ export default function Fifth_SP() {
 			}
 			<div className='footer'>
 				<div className='terms'>Terms & Conditions | Privacy Policy</div>
-				<div className='copyright'>Copyright © 2022 - All right reserved Daily America Savings.</div>
+				<div className='copyright'>Copyright © 2024 - All right reserved Daily America Savings.</div>
 			</div>
 		</div>
     )
