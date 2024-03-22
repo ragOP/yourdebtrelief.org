@@ -5,6 +5,9 @@ import axios from "axios";
 import './styles.scss'
 
 import { scrollTo } from '../utils';
+import { ToastContainer, toast, cssTransition } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 import Head_bg from '../assets/hero8.png'
 import Headline from '../assets/headline_spandeb1.png'
@@ -162,6 +165,106 @@ export default function Fifth_SP() {
 		}
 	}
 
+	const messages = [
+		"Alejandro Sánchez from Miami, FL acaba de calificar para $37,621 en Alivio de Deuda.",
+		"Sofia García from Los Angeles, CA acaba de calificar para $28,945 en Alivio de Deuda.",
+		"Mateo López from San Antonio, TX acaba de calificar para $45,213 en Alivio de Deuda.",
+		"Valentina Hernández from Albuquerque, NM acaba de calificar para $21,874 en Alivio de Deuda.",
+		"Diego Martínez from Phoenix, AZ acaba de calificar para $34,567 en Alivio de Deuda"
+];
+
+// Function to shuffle array in place
+const shuffleArray = (array:any) => {
+		for (let i = array.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[array[i], array[j]] = [array[j], array[i]];
+		}
+};
+
+shuffleArray(messages);
+
+const notify = (message:any) => {
+		// Dismiss all existing toasts
+		toast.dismiss();
+		let boldedMessage = message;
+
+
+		// Make the word "Allowance" bold in all lines
+		boldedMessage = boldedMessage.replace(
+				/\$37,621 en Alivio de Deuda/g,
+				'<strong class="green-bold">$37,621 en Alivio de Deuda.</strong>'
+		);
+		boldedMessage = boldedMessage.replace(
+			/\$28,945 en Alivio de Deuda./g,
+			'<strong class="green-bold">$28,945 en Alivio de Deuda.</strong>'
+	);
+	boldedMessage = boldedMessage.replace(
+		/\$45,213 en Alivio de Deuda./g,
+		'<strong class="green-bold">$45,213 en Alivio de Deuda.</strong>'
+);
+boldedMessage = boldedMessage.replace(
+	/\$21,874 en Alivio de Deuda./g,
+	'<strong class="green-bold">$21,874 en Alivio de Deuda.</strong>'
+);
+boldedMessage = boldedMessage.replace(
+	/\$34,567 en Alivio de Deuda/g,
+	'<strong class="green-bold">$34,567 en Alivio de Deuda</strong>'
+);
+
+		// Make specific dollar amounts bold only in specific lines
+		const specialAmounts = ["$16,800", "$16,800", "$16,800", "$16,800"];
+		specialAmounts.forEach((amount) => {
+				if (message.includes(amount)) {
+						boldedMessage = boldedMessage.replace(
+								amount,
+								`<strong class="green-bold">${amount}</strong>`
+						);
+				}
+		});
+
+		// Show new toast
+		toast(<div dangerouslySetInnerHTML={{ __html: boldedMessage }} />, {
+				position: "bottom-right",
+				autoClose: 5000,
+				hideProgressBar: true,
+				closeOnClick: false,
+				pauseOnHover: true,
+				draggable: true,
+				closeButton: false,
+		});
+};
+
+useEffect(() => {
+		const delayedEffect = setTimeout(() => {
+				// Create a function to handle the logic
+				const showRandomToast = () => {
+						const randomTime = 6000;
+						const randomMessage =
+								messages[Math.floor(Math.random() * messages.length)];
+						notify(randomMessage);
+						return randomTime;
+				};
+				
+				// Show the first toast
+				let nextTime = showRandomToast();
+
+				// Set up a recurring timer
+				const timer = setInterval(() => {
+						nextTime = showRandomToast();
+				}, nextTime);
+
+				// Cleanup
+				return () => {
+						clearInterval(timer);
+				};
+		}, 6000); // 6-second delay before the useEffect code runs
+
+		// Cleanup for the setTimeout
+		return () => {
+				clearTimeout(delayedEffect);
+		};
+}, []);
+
 	useEffect(() => {
 		stepProcess()
 	}, [step])
@@ -244,6 +347,7 @@ export default function Fifth_SP() {
 
     return(
         <div>
+									<ToastContainer />
 			<div className='top-sticky-blue' id='top'>Emergency Relief Program</div>
 			{step==="process"?
 				<>
@@ -294,6 +398,16 @@ export default function Fifth_SP() {
 				<div className='terms'>Terms & Conditions | Privacy Policy</div>
 				<div className='copyright'>Copyright © 2024 - All right reserved Daily America Savings.</div>
 			</div>
+			<ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
 		</div>
     )
 } 
