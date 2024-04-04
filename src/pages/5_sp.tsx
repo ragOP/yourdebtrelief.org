@@ -9,7 +9,7 @@ import { ToastContainer, toast, cssTransition } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 
-import Head_bg from '../assets/hero8.png'
+import Head_bg from '../assets/aaa.png'
 import Headline from '../assets/headline_spandeb1.png'
 
 // google tag manager
