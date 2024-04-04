@@ -278,7 +278,7 @@ useEffect(() => {
     return(
         <div>
 									<ToastContainer />
-			<div className='top-sticky-blue' id='top'>1Emergency Relief Program</div>
+			<div className='top-sticky-blue' id='top'>Emergency Relief Program</div>
 			{step==="process"?
 				<>
 					<div className='main-container-5'>
