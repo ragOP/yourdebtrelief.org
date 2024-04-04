@@ -25,84 +25,14 @@ export default function Fifth_SP() {
 	useEffect(() => {
 		window.document.title="Verifique su elegibilidad ahora";
 
-		axios
-      .get(process.env.REACT_APP_PROXY + `/visits/8`)
-      .then(({ data }) => {
-        if(data.length===0){
-			const visits = {
-				visits: 1,
-				views: 0,
-				calls: 0,
-				positives: 0,
-				negatives: 0,
-			}
-
-			axios
-			.post(
-				process.env.REACT_APP_PROXY + `/visits/create-visits8`,
-				visits
-			)
-			.catch((err) =>
-				console.log(err)
-			);
-
-		}else{
-			const _id = data[0]._id
-			const _visits = data[0].visits
-			const _views = data[0].views
-			const _calls = data[0].calls
-			const _positives = data[0].positives
-			const _negatives = data[0].negatives
-			
-			const visits = {
-				visits: _visits+1,
-				views: _views,
-				calls: _calls,
-				positives: _positives,
-				negatives: _negatives,
-			}
-			axios
-			.put(
-				process.env.REACT_APP_PROXY + `/visits/update-visits8/`+_id,
-				visits
-			)
-			.catch((err) =>
-				console.log(err)
-			);
-				}
-			})
-		.catch((error) => {
-			console.log(error);
-		});
+		
 
 	}, [])
 
 	const handleCall = () => {
-		axios
-		.get(process.env.REACT_APP_PROXY + `/visits/8`)
-		.then(({ data }) => {
-			const _id = data[0]._id
-			const _visits = data[0].visits
-			const _views = data[0].views
-			const _calls = data[0].calls
-			const _positives = data[0].positives
-			const _negatives = data[0].negatives
-			const visits = {
-				visits: _visits,
-				views: _views,
-				calls: _calls+1,
-				positives: _positives,
-				negatives: _negatives,
-			}
-		axios
-		.put(
-			process.env.REACT_APP_PROXY + `/visits/update-visits8/`+_id,
-			visits
-		)
-		.catch((err) =>
-			console.log(err)
-		);
-	  })
+		
+		
+	 
 	}
 
 
@@ -348,7 +278,7 @@ useEffect(() => {
     return(
         <div>
 									<ToastContainer />
-			<div className='top-sticky-blue' id='top'>Emergency Relief Program</div>
+			<div className='top-sticky-blue' id='top'>1Emergency Relief Program</div>
 			{step==="process"?
 				<>
 					<div className='main-container-5'>
